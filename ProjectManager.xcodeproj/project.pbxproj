@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		64AD5EE929354B05000900BF /* Item-CoreDataHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64AD5EE829354B05000900BF /* Item-CoreDataHelpers.swift */; };
+		64AD5EEC29354C94000900BF /* Project-CoreDataHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64AD5EEB29354C94000900BF /* Project-CoreDataHelpers.swift */; };
 		64DE93642934547C002373BE /* ProjectManagerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64DE93632934547C002373BE /* ProjectManagerApp.swift */; };
 		64DE93682934547D002373BE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 64DE93672934547D002373BE /* Assets.xcassets */; };
 		64DE936B2934547D002373BE /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 64DE936A2934547D002373BE /* Preview Assets.xcassets */; };
@@ -18,6 +20,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		64AD5EE829354B05000900BF /* Item-CoreDataHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Item-CoreDataHelpers.swift"; sourceTree = "<group>"; };
+		64AD5EEB29354C94000900BF /* Project-CoreDataHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Project-CoreDataHelpers.swift"; sourceTree = "<group>"; };
 		64DE93602934547C002373BE /* ProjectManager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ProjectManager.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		64DE93632934547C002373BE /* ProjectManagerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectManagerApp.swift; sourceTree = "<group>"; };
 		64DE93672934547D002373BE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -42,6 +46,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		64AD5EEA29354B0D000900BF /* EXTENSIONS */ = {
+			isa = PBXGroup;
+			children = (
+				64AD5EE829354B05000900BF /* Item-CoreDataHelpers.swift */,
+				64AD5EEB29354C94000900BF /* Project-CoreDataHelpers.swift */,
+			);
+			path = EXTENSIONS;
+			sourceTree = "<group>";
+		};
 		64DE93572934547C002373BE = {
 			isa = PBXGroup;
 			children = (
@@ -64,8 +77,9 @@
 				64DE93632934547C002373BE /* ProjectManagerApp.swift */,
 				64DE9371293454A6002373BE /* ProjectManager.entitlements */,
 				64DE9372293454CE002373BE /* Info.plist */,
-				64DE938029345549002373BE /* DATA MODELS */,
+				64AD5EEA29354B0D000900BF /* EXTENSIONS */,
 				64DE937E2934552D002373BE /* VIEWS */,
+				64DE938029345549002373BE /* DATA MODELS */,
 				64DE93672934547D002373BE /* Assets.xcassets */,
 				64DE93692934547D002373BE /* Preview Content */,
 			);
@@ -84,8 +98,8 @@
 			isa = PBXGroup;
 			children = (
 				64DE9383293455B4002373BE /* ContentView.swift */,
-				64DE937929345515002373BE /* ProjectsView.swift */,
 				64DE937829345515002373BE /* HomeView.swift */,
+				64DE937929345515002373BE /* ProjectsView.swift */,
 			);
 			path = VIEWS;
 			sourceTree = "<group>";
@@ -171,10 +185,12 @@
 			files = (
 				64DE937C29345515002373BE /* ProjectsView.swift in Sources */,
 				64DE9374293454F3002373BE /* DataController.swift in Sources */,
+				64AD5EEC29354C94000900BF /* Project-CoreDataHelpers.swift in Sources */,
 				64DE9384293455B4002373BE /* ContentView.swift in Sources */,
 				64DE9377293454FC002373BE /* Main.xcdatamodeld in Sources */,
 				64DE937B29345515002373BE /* HomeView.swift in Sources */,
 				64DE93642934547C002373BE /* ProjectManagerApp.swift in Sources */,
+				64AD5EE929354B05000900BF /* Item-CoreDataHelpers.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
