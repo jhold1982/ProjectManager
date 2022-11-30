@@ -9,6 +9,9 @@ import SwiftUI
 
 struct ProjectsView: View {
 	
+	static let openTag: String? = "Open"
+	static let closedTag: String? = "Closed"
+	
 	let showClosedProjects: Bool
 	
 	let projects: FetchRequest<Project>
@@ -27,29 +30,32 @@ struct ProjectsView: View {
 		
 		NavigationView {
 			List {
+				
+				// MARK: OUTER FOREACH
 				ForEach(projects.wrappedValue) { project in
-					Section(header: Text(project.projectTitle)) {
+					Section(header: ProjectHeaderView(project: project)) {
+						
+						// MARK: INNER FOREACH
 						ForEach(project.projectItems) { item in
-							Text(item.itemTitle)
+							ItemRowView(item: item)
+							
+							}
 						}
 					}
 				}
 			}
 			.listStyle(InsetGroupedListStyle())
 			.navigationTitle(showClosedProjects ? "Closed Projects" : "Open Projects")
-		}
-		
-        
-		
-		
-		
-    }
+	}
 }
 
+
 struct ProjectsView_Previews: PreviewProvider {
+
 	static var dataController = DataController.preview
     static var previews: some View {
-        ProjectsView(showClosedProjects: false)
+
+		ProjectsView(showClosedProjects: false)
 			.environment(\.managedObjectContext, dataController.container.viewContext)
 			.environmentObject(dataController)
     }

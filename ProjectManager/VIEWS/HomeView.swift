@@ -11,6 +11,8 @@ struct HomeView: View {
 	
 	@EnvironmentObject var dataController: DataController
 	
+	static let tag: String? = "Home"
+	
     var body: some View {
 		
 		NavigationView {
