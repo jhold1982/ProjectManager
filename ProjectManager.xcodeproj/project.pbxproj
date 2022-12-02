@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		640396D42939B008005EC779 /* Sequence-Sorting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 640396D32939B008005EC779 /* Sequence-Sorting.swift */; };
 		64378BA929366C170095B974 /* EditItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64378BA829366C170095B974 /* EditItemView.swift */; };
 		64378BAB29366E450095B974 /* ItemRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64378BAA29366E450095B974 /* ItemRowView.swift */; };
 		64378BAD29369F6F0095B974 /* Binding-OnChange.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64378BAC29369F6F0095B974 /* Binding-OnChange.swift */; };
@@ -26,6 +27,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		640396D32939B008005EC779 /* Sequence-Sorting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Sequence-Sorting.swift"; sourceTree = "<group>"; };
 		64378BA829366C170095B974 /* EditItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditItemView.swift; sourceTree = "<group>"; };
 		64378BAA29366E450095B974 /* ItemRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemRowView.swift; sourceTree = "<group>"; };
 		64378BAC29369F6F0095B974 /* Binding-OnChange.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Binding-OnChange.swift"; sourceTree = "<group>"; };
@@ -63,6 +65,7 @@
 			children = (
 				64AD5EE829354B05000900BF /* Item-CoreDataHelpers.swift */,
 				64AD5EEB29354C94000900BF /* Project-CoreDataHelpers.swift */,
+				640396D32939B008005EC779 /* Sequence-Sorting.swift */,
 				64378BAC29369F6F0095B974 /* Binding-OnChange.swift */,
 			);
 			path = EXTENSIONS;
@@ -211,6 +214,7 @@
 				64378BAB29366E450095B974 /* ItemRowView.swift in Sources */,
 				64DE9377293454FC002373BE /* Main.xcdatamodeld in Sources */,
 				64378BAD29369F6F0095B974 /* Binding-OnChange.swift in Sources */,
+				640396D42939B008005EC779 /* Sequence-Sorting.swift in Sources */,
 				64DE937B29345515002373BE /* HomeView.swift in Sources */,
 				64DE93642934547C002373BE /* ProjectManagerApp.swift in Sources */,
 				64AD5EE929354B05000900BF /* Item-CoreDataHelpers.swift in Sources */,
