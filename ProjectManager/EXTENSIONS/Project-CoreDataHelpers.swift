@@ -71,7 +71,6 @@ extension Project {
 		
 		return project
 	}
-	
 	func projectItems(using sortOrder: Item.SortOrder) -> [Item] {
 		switch sortOrder {
 		case .title:
@@ -82,5 +81,4 @@ extension Project {
 			return projectItemsDefaultSorted
 		}
 	}
-	
 }

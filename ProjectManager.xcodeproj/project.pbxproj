@@ -8,6 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		640396D42939B008005EC779 /* Sequence-Sorting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 640396D32939B008005EC779 /* Sequence-Sorting.swift */; };
+		640396D62939C3A5005EC779 /* SelectSomethingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 640396D52939C3A5005EC779 /* SelectSomethingView.swift */; };
+		640396D8293A666F005EC779 /* Awards.json in Resources */ = {isa = PBXBuildFile; fileRef = 640396D7293A666F005EC779 /* Awards.json */; };
+		640396DA293A66CF005EC779 /* Bundle-Decodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 640396D9293A66CF005EC779 /* Bundle-Decodable.swift */; };
+		640396DC293A6D93005EC779 /* Award.swift in Sources */ = {isa = PBXBuildFile; fileRef = 640396DB293A6D93005EC779 /* Award.swift */; };
+		640396DF293A6E91005EC779 /* AwardsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 640396DE293A6E91005EC779 /* AwardsView.swift */; };
 		64378BA929366C170095B974 /* EditItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64378BA829366C170095B974 /* EditItemView.swift */; };
 		64378BAB29366E450095B974 /* ItemRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64378BAA29366E450095B974 /* ItemRowView.swift */; };
 		64378BAD29369F6F0095B974 /* Binding-OnChange.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64378BAC29369F6F0095B974 /* Binding-OnChange.swift */; };
@@ -28,6 +33,11 @@
 
 /* Begin PBXFileReference section */
 		640396D32939B008005EC779 /* Sequence-Sorting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Sequence-Sorting.swift"; sourceTree = "<group>"; };
+		640396D52939C3A5005EC779 /* SelectSomethingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectSomethingView.swift; sourceTree = "<group>"; };
+		640396D7293A666F005EC779 /* Awards.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Awards.json; sourceTree = "<group>"; };
+		640396D9293A66CF005EC779 /* Bundle-Decodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle-Decodable.swift"; sourceTree = "<group>"; };
+		640396DB293A6D93005EC779 /* Award.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Award.swift; sourceTree = "<group>"; };
+		640396DE293A6E91005EC779 /* AwardsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AwardsView.swift; sourceTree = "<group>"; };
 		64378BA829366C170095B974 /* EditItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditItemView.swift; sourceTree = "<group>"; };
 		64378BAA29366E450095B974 /* ItemRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemRowView.swift; sourceTree = "<group>"; };
 		64378BAC29369F6F0095B974 /* Binding-OnChange.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Binding-OnChange.swift"; sourceTree = "<group>"; };
@@ -41,7 +51,7 @@
 		64DE93672934547D002373BE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		64DE936A2934547D002373BE /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		64DE9371293454A6002373BE /* ProjectManager.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ProjectManager.entitlements; sourceTree = "<group>"; };
-		64DE9372293454CE002373BE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		64DE9372293454CE002373BE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		64DE9373293454F3002373BE /* DataController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataController.swift; sourceTree = "<group>"; };
 		64DE9376293454FC002373BE /* Main.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Main.xcdatamodel; sourceTree = "<group>"; };
 		64DE937829345515002373BE /* HomeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
@@ -60,6 +70,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		640396DD293A6E07005EC779 /* ASSETS */ = {
+			isa = PBXGroup;
+			children = (
+				64DE93672934547D002373BE /* Assets.xcassets */,
+				64378BB02937314A0095B974 /* Colors.xcassets */,
+			);
+			path = ASSETS;
+			sourceTree = "<group>";
+		};
 		64AD5EEA29354B0D000900BF /* EXTENSIONS */ = {
 			isa = PBXGroup;
 			children = (
@@ -91,13 +110,13 @@
 			isa = PBXGroup;
 			children = (
 				64DE93632934547C002373BE /* ProjectManagerApp.swift */,
-				64DE9371293454A6002373BE /* ProjectManager.entitlements */,
 				64DE9372293454CE002373BE /* Info.plist */,
+				640396D7293A666F005EC779 /* Awards.json */,
+				64DE9371293454A6002373BE /* ProjectManager.entitlements */,
 				64AD5EEA29354B0D000900BF /* EXTENSIONS */,
 				64DE937E2934552D002373BE /* VIEWS */,
 				64DE938029345549002373BE /* DATA MODELS */,
-				64DE93672934547D002373BE /* Assets.xcassets */,
-				64378BB02937314A0095B974 /* Colors.xcassets */,
+				640396DD293A6E07005EC779 /* ASSETS */,
 				64DE93692934547D002373BE /* Preview Content */,
 			);
 			path = ProjectManager;
@@ -117,7 +136,10 @@
 				64DE9383293455B4002373BE /* ContentView.swift */,
 				64DE937829345515002373BE /* HomeView.swift */,
 				64DE937929345515002373BE /* ProjectsView.swift */,
+				640396D9293A66CF005EC779 /* Bundle-Decodable.swift */,
+				640396D52939C3A5005EC779 /* SelectSomethingView.swift */,
 				64378BAE29372E1B0095B974 /* ProjectHeaderView.swift */,
+				640396DE293A6E91005EC779 /* AwardsView.swift */,
 				64378BAA29366E450095B974 /* ItemRowView.swift */,
 				64378BB2293732B40095B974 /* EditProjectView.swift */,
 				64378BA829366C170095B974 /* EditItemView.swift */,
@@ -128,6 +150,7 @@
 		64DE938029345549002373BE /* DATA MODELS */ = {
 			isa = PBXGroup;
 			children = (
+				640396DB293A6D93005EC779 /* Award.swift */,
 				64DE9373293454F3002373BE /* DataController.swift */,
 				64DE9375293454FC002373BE /* Main.xcdatamodeld */,
 			);
@@ -193,6 +216,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				64378BB12937314A0095B974 /* Colors.xcassets in Resources */,
+				640396D8293A666F005EC779 /* Awards.json in Resources */,
 				64DE936B2934547D002373BE /* Preview Assets.xcassets in Resources */,
 				64DE93682934547D002373BE /* Assets.xcassets in Resources */,
 			);
@@ -207,14 +231,18 @@
 			files = (
 				64DE937C29345515002373BE /* ProjectsView.swift in Sources */,
 				64378BAF29372E1B0095B974 /* ProjectHeaderView.swift in Sources */,
+				640396DF293A6E91005EC779 /* AwardsView.swift in Sources */,
 				64DE9374293454F3002373BE /* DataController.swift in Sources */,
 				64AD5EEC29354C94000900BF /* Project-CoreDataHelpers.swift in Sources */,
 				64378BB3293732B40095B974 /* EditProjectView.swift in Sources */,
 				64DE9384293455B4002373BE /* ContentView.swift in Sources */,
+				640396D62939C3A5005EC779 /* SelectSomethingView.swift in Sources */,
+				640396DC293A6D93005EC779 /* Award.swift in Sources */,
 				64378BAB29366E450095B974 /* ItemRowView.swift in Sources */,
 				64DE9377293454FC002373BE /* Main.xcdatamodeld in Sources */,
 				64378BAD29369F6F0095B974 /* Binding-OnChange.swift in Sources */,
 				640396D42939B008005EC779 /* Sequence-Sorting.swift in Sources */,
+				640396DA293A66CF005EC779 /* Bundle-Decodable.swift in Sources */,
 				64DE937B29345515002373BE /* HomeView.swift in Sources */,
 				64DE93642934547C002373BE /* ProjectManagerApp.swift in Sources */,
 				64AD5EE929354B05000900BF /* Item-CoreDataHelpers.swift in Sources */,
