@@ -82,10 +82,10 @@
 		64AD5EEA29354B0D000900BF /* EXTENSIONS */ = {
 			isa = PBXGroup;
 			children = (
-				64AD5EE829354B05000900BF /* Item-CoreDataHelpers.swift */,
-				64AD5EEB29354C94000900BF /* Project-CoreDataHelpers.swift */,
 				640396D32939B008005EC779 /* Sequence-Sorting.swift */,
 				64378BAC29369F6F0095B974 /* Binding-OnChange.swift */,
+				64AD5EE829354B05000900BF /* Item-CoreDataHelpers.swift */,
+				64AD5EEB29354C94000900BF /* Project-CoreDataHelpers.swift */,
 			);
 			path = EXTENSIONS;
 			sourceTree = "<group>";
@@ -109,9 +109,9 @@
 		64DE93622934547C002373BE /* ProjectManager */ = {
 			isa = PBXGroup;
 			children = (
-				64DE93632934547C002373BE /* ProjectManagerApp.swift */,
 				64DE9372293454CE002373BE /* Info.plist */,
 				640396D7293A666F005EC779 /* Awards.json */,
+				64DE93632934547C002373BE /* ProjectManagerApp.swift */,
 				64DE9371293454A6002373BE /* ProjectManager.entitlements */,
 				64AD5EEA29354B0D000900BF /* EXTENSIONS */,
 				64DE937E2934552D002373BE /* VIEWS */,
@@ -133,16 +133,16 @@
 		64DE937E2934552D002373BE /* VIEWS */ = {
 			isa = PBXGroup;
 			children = (
-				64DE9383293455B4002373BE /* ContentView.swift */,
 				64DE937829345515002373BE /* HomeView.swift */,
-				64DE937929345515002373BE /* ProjectsView.swift */,
-				640396D9293A66CF005EC779 /* Bundle-Decodable.swift */,
-				640396D52939C3A5005EC779 /* SelectSomethingView.swift */,
-				64378BAE29372E1B0095B974 /* ProjectHeaderView.swift */,
 				640396DE293A6E91005EC779 /* AwardsView.swift */,
+				64DE9383293455B4002373BE /* ContentView.swift */,
+				64DE937929345515002373BE /* ProjectsView.swift */,
+				64378BA829366C170095B974 /* EditItemView.swift */,
 				64378BAA29366E450095B974 /* ItemRowView.swift */,
 				64378BB2293732B40095B974 /* EditProjectView.swift */,
-				64378BA829366C170095B974 /* EditItemView.swift */,
+				640396D9293A66CF005EC779 /* Bundle-Decodable.swift */,
+				64378BAE29372E1B0095B974 /* ProjectHeaderView.swift */,
+				640396D52939C3A5005EC779 /* SelectSomethingView.swift */,
 			);
 			path = VIEWS;
 			sourceTree = "<group>";
