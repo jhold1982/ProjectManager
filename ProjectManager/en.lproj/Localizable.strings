@@ -1,0 +1,113 @@
+/* 
+  Localizable.strings
+  ProjectManager
+
+  Created by Justin Hold on 12/4/22.
+  
+*/
+
+"Delete" = "Delete";
+"Okay" = "Okay";
+
+
+
+"Home" = "Home";
+"Open" = "Open";
+"Closed" = "Closed";
+"Awards" = "Awards";
+
+
+
+"Up next" = "Up next";
+"More to explore" = "More to explore";
+
+
+
+"Open Projects" = "Open Projects";
+"Closed Projects" = "Closed Projects";
+"Add Project" = "Add Project";
+"Add project" = "Add project";
+"Add New Item" = "Add New Item";
+"Add new item" = "Add new item";
+"Sort" = "Sort";
+"Sort Items" = "Sort Items";
+"Sort items" = "Sort items";
+"Optimized" = "Optimized";
+"Title" = "Title";
+"Priority" = "Priority";
+"Creation Date" = "Creation Date";
+
+
+
+"Basic settings" = "Basic settings";
+
+
+
+"Closed Projects" = "Closed Projects";
+
+
+
+"Low" = "Low";
+"Medium" = "Medium";
+"High" = "High";
+
+
+
+/* Awards - either Locked or Unlocked */
+"Locked " = "Locked ";
+"Unlocked %@" = "Unlocked %@";
+
+
+
+"Description" = "Description";
+
+
+
+"Edit Project" = "Edit Project";
+"Edit project" = "Edit project";
+
+
+
+"Project Name" = "Project Name";
+"Project Description" = "Project Description";
+
+
+
+"Basic Settings" = "Basic Settings";
+"Custom Project Color" = "Custom Project Color";
+
+
+
+"Edit Item" = "Edit Item";
+"Item name" = "Item name";
+
+
+
+"New Project" = "New Project";
+"New Item" = "New Item";
+"New project" = "New project";
+"New item" = "New item";
+
+
+
+"Mark Completed" = "Mark Completed";
+"Close project" = "Close project";
+"Delete project" = "Delete project";
+"Reopen project" = "Reopen project";
+"Delete project?" = "Delete project?";
+
+
+
+"Closing a project moves it from open to closed status; Deleting it removes it entirely." = "Closing a project moves it from open to closed status; Deleting it removes it entirely.";
+
+
+
+"Are you sure you want to delete? This will delete all items in project." = "Are you sure you want to delete? This will delete all items in project.";
+
+
+
+"Select something from the menu to begin." = "Select something from the menu to begin.";
+
+
+
+"Move along, nothing to see here." = "Move along, nothing to see here.";
