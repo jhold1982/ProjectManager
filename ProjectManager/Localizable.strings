@@ -1,0 +1,108 @@
+/* 
+  Localizable.strings
+  ProjectManager
+
+  Created by Justin Hold on 12/4/22.
+  
+*/
+
+/* No comment provided by engineer. */
+"Are you sure you want to delete? This will delete all items in project." = "Are you sure you want to delete? This will delete all items in project.";
+
+/* No comment provided by engineer. */
+"Awards" = "Awards";
+
+/* No comment provided by engineer. */
+"Basic settings" = "Basic settings";
+
+/* No comment provided by engineer. */
+"Closed Projects" = "Closed Projects";
+
+/* No comment provided by engineer. */
+"Closing a project moves it from open to closed status; Deleting it removes it entirely." = "Closing a project moves it from open to closed status; Deleting it removes it entirely.";
+
+/* No comment provided by engineer. */
+"Creation Date" = "Creation Date";
+
+/* No comment provided by engineer. */
+"Delete" = "Delete";
+
+/* No comment provided by engineer. */
+"Delete project?" = "Delete project?";
+
+/* No comment provided by engineer. */
+"High" = "High";
+
+/* No comment provided by engineer. */
+"Home" = "Home";
+
+/* No comment provided by engineer. */
+"Locked " = "Locked ";
+
+/* No comment provided by engineer. */
+"Low" = "Low";
+
+/* No comment provided by engineer. */
+"Medium" = "Medium";
+
+/* No comment provided by engineer. */
+"Move along, nothing to see here." = "Move along, nothing to see here.";
+
+/* No comment provided by engineer. */
+"Okay" = "Okay";
+
+/* No comment provided by engineer. */
+"Open Projects" = "Open Projects";
+
+/* No comment provided by engineer. */
+"Optimized" = "Optimized";
+
+/* No comment provided by engineer. */
+"Priority" = "Priority";
+
+/* No comment provided by engineer. */
+"Select something from the menu to begin." = "Select something from the menu to begin.";
+
+/* No comment provided by engineer. */
+"Sort Items" = "Sort Items";
+
+/* No comment provided by engineer. */
+"Title" = "Title";
+
+/* No comment provided by engineer. */
+"Unlocked %@" = "Unlocked %@";
+
+/* Adding text strings not found by genstrings */
+
+"Open Projects" = "Open Projects";
+"Closed Projects" = "Closed Projects";
+"Add Project" = "Add Project";
+"Sort" = "Sort";
+"Add New Item" = "Add New Item";
+"Add new item" = "Add new item";
+"Mark Completed" = "Mark Completed";
+"Edit Item" = "Edit Item";
+"Item name" = "Item name";
+"Description" = "Description";
+"Close project" = "Close project";
+"Delete project" = "Delete project";
+"Reopen project" = "Reopen project";
+"Add project" = "Add project";
+"Edit Project" = "Edit Project";
+"Edit project" = "Edit project";
+"Project Name" = "Project Name";
+"Project Description" = "Project Description";
+"Basic Settings" = "Basic Settings";
+"Custom Project Color" = "Custom Project Color";
+"Up next" = "Up next";
+"More to explore" = "More to explore";
+"Open" = "Open";
+"Closed" = "Closed";
+"New Project" = "New Project";
+"New Item" = "New Item";
+"New project" = "New project";
+"New item" = "New item";
+
+
+
+

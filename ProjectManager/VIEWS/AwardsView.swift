@@ -4,7 +4,7 @@
 //
 //  Created by Justin Hold on 12/2/22.
 //
-
+import CoreData
 import SwiftUI
 
 struct AwardsView: View {
@@ -12,6 +12,7 @@ struct AwardsView: View {
 	static let tag: String? = "Awards"
 	
 	@EnvironmentObject var dataController: DataController
+	
 	@State private var selectedAward = Award.example
 	@State private var showingAwardDetails = false
 

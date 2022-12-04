@@ -10,11 +10,11 @@ import Foundation
 extension Project {
 	
 	var projectTitle: String {
-		title ?? "Project Title"
+		title ?? NSLocalizedString("New Project", comment: "Create a new project")
 	}
 	
 	var projectDetail: String {
-		detail ?? "Project Detail"
+		detail ?? ""
 	}
 	
 	var projectColor: String {
