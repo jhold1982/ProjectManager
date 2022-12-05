@@ -82,3 +82,23 @@
 
 /* Shown by default when the user hasn't select a project or item */
 "Please select something from the menu to begin." = "A kezdéshez válasszon valamit a menüből.";
+
+
+"%@, %lld items, %g%% complete." = "%@, %lld tétel, %g%% kész.";
+
+"Select a color" = "Válassza ki a színt";
+"Pink" = "Rózsaszín";
+"Purple" = "Lila";
+"Red" = "Piros";
+"Orange" = "Narancs sárga";
+"Gold" = "Arany";
+"Green" = "Zöld";
+"Teal" = "Zöldeskék";
+"Light Blue" = "Világos kék";
+"Dark Blue" = "Sötét kék";
+"Midnight" = "Éjfél";
+"Dark Gray" = "Sötét szürke";
+"Gray" = "Szürke";
+
+"%@, completed." = "%@, elkészült.";
+"%@, high priority." = "%@, elsőbbségi.";

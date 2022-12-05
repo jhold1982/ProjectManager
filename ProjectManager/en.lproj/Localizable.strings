@@ -111,3 +111,24 @@
 
 
 "Move along, nothing to see here." = "Move along, nothing to see here.";
+
+
+"%@, %lld items, %g%% complete." = "%@, %lld items, %g%% complete.";
+
+"Select a project color" = "Select a project color";
+"Pink" = "Pink";
+"Purple" = "Purple";
+"Red" = "Red";
+"Orange" = "Orange";
+"Gold" = "Gold";
+"Green" = "Green";
+"Teal" = "Teal";
+"Light Blue" = "Light Blue";
+"Dark Blue" = "Dark Blue";
+"Midnight" = "Midnight";
+"Dark Gray" = "Dark Gray";
+"Gray" = "Gray";
+
+
+"%@, completed." = "%@, completed.";
+"%@, high priority." = "%@, high priority.";
