@@ -92,6 +92,76 @@
 			path = ASSETS;
 			sourceTree = "<group>";
 		};
+		6422070B29425F3E000B58A9 /* CONTROLLERS */ = {
+			isa = PBXGroup;
+			children = (
+				64DE9373293454F3002373BE /* DataController.swift */,
+			);
+			path = CONTROLLERS;
+			sourceTree = "<group>";
+		};
+		6422070C294260B0000B58A9 /* LOCALIZATION */ = {
+			isa = PBXGroup;
+			children = (
+				64FF61E6293D22530046504C /* Localizable.strings */,
+				64FF61EA293D23AB0046504C /* Localizable.stringsdict */,
+			);
+			path = LOCALIZATION;
+			sourceTree = "<group>";
+		};
+		6422070D294260D1000B58A9 /* CONFIGURATION */ = {
+			isa = PBXGroup;
+			children = (
+				64DE9372293454CE002373BE /* Info.plist */,
+				64DE9375293454FC002373BE /* Main.xcdatamodeld */,
+				64DE9371293454A6002373BE /* ProjectManager.entitlements */,
+			);
+			path = CONFIGURATION;
+			sourceTree = "<group>";
+		};
+		6422070E2942614E000B58A9 /* ACTIVITIES */ = {
+			isa = PBXGroup;
+			children = (
+				6422070F29426159000B58A9 /* HOME */,
+				6422071029426162000B58A9 /* PROJECTS */,
+				642207112942616E000B58A9 /* AWARDS */,
+			);
+			path = ACTIVITIES;
+			sourceTree = "<group>";
+		};
+		6422070F29426159000B58A9 /* HOME */ = {
+			isa = PBXGroup;
+			children = (
+				64DE937829345515002373BE /* HomeView.swift */,
+				64D5F5AB293E75F800547351 /* ItemListView.swift */,
+				64D5F5AD293E77DC00547351 /* ProjectSummaryView.swift */,
+			);
+			path = HOME;
+			sourceTree = "<group>";
+		};
+		6422071029426162000B58A9 /* PROJECTS */ = {
+			isa = PBXGroup;
+			children = (
+				64DE937929345515002373BE /* ProjectsView.swift */,
+				640396D52939C3A5005EC779 /* SelectSomethingView.swift */,
+				64378BA829366C170095B974 /* EditItemView.swift */,
+				64378BAA29366E450095B974 /* ItemRowView.swift */,
+				64378BB2293732B40095B974 /* EditProjectView.swift */,
+				64378BAE29372E1B0095B974 /* ProjectHeaderView.swift */,
+			);
+			path = PROJECTS;
+			sourceTree = "<group>";
+		};
+		642207112942616E000B58A9 /* AWARDS */ = {
+			isa = PBXGroup;
+			children = (
+				64FF61EE293D25380046504C /* Awards.json */,
+				640396DB293A6D93005EC779 /* Award.swift */,
+				640396DE293A6E91005EC779 /* AwardsView.swift */,
+			);
+			path = AWARDS;
+			sourceTree = "<group>";
+		};
 		64AD5EEA29354B0D000900BF /* EXTENSIONS */ = {
 			isa = PBXGroup;
 			children = (
@@ -99,8 +169,6 @@
 				640396D32939B008005EC779 /* Sequence-Sorting.swift */,
 				640396D9293A66CF005EC779 /* Bundle-Decodable.swift */,
 				64378BAC29369F6F0095B974 /* Binding-OnChange.swift */,
-				64AD5EE829354B05000900BF /* Item-CoreDataHelpers.swift */,
-				64AD5EEB29354C94000900BF /* Project-CoreDataHelpers.swift */,
 			);
 			path = EXTENSIONS;
 			sourceTree = "<group>";
@@ -124,15 +192,14 @@
 		64DE93622934547C002373BE /* ProjectManager */ = {
 			isa = PBXGroup;
 			children = (
-				64DE9372293454CE002373BE /* Info.plist */,
-				64FF61EE293D25380046504C /* Awards.json */,
-				64FF61E6293D22530046504C /* Localizable.strings */,
-				64FF61EA293D23AB0046504C /* Localizable.stringsdict */,
 				64DE93632934547C002373BE /* ProjectManagerApp.swift */,
-				64DE9371293454A6002373BE /* ProjectManager.entitlements */,
+				64DE9383293455B4002373BE /* ContentView.swift */,
+				6422070E2942614E000B58A9 /* ACTIVITIES */,
+				6422070D294260D1000B58A9 /* CONFIGURATION */,
+				6422070C294260B0000B58A9 /* LOCALIZATION */,
 				64AD5EEA29354B0D000900BF /* EXTENSIONS */,
-				64DE937E2934552D002373BE /* VIEWS */,
-				64DE938029345549002373BE /* DATA MODELS */,
+				6422070B29425F3E000B58A9 /* CONTROLLERS */,
+				64DE938029345549002373BE /* MODELS */,
 				640396DD293A6E07005EC779 /* ASSETS */,
 				64DE93692934547D002373BE /* Preview Content */,
 			);
@@ -147,32 +214,13 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
-		64DE937E2934552D002373BE /* VIEWS */ = {
+		64DE938029345549002373BE /* MODELS */ = {
 			isa = PBXGroup;
 			children = (
-				64DE937829345515002373BE /* HomeView.swift */,
-				640396DE293A6E91005EC779 /* AwardsView.swift */,
-				64D5F5AB293E75F800547351 /* ItemListView.swift */,
-				64DE9383293455B4002373BE /* ContentView.swift */,
-				64DE937929345515002373BE /* ProjectsView.swift */,
-				64378BA829366C170095B974 /* EditItemView.swift */,
-				64378BAA29366E450095B974 /* ItemRowView.swift */,
-				64378BB2293732B40095B974 /* EditProjectView.swift */,
-				64378BAE29372E1B0095B974 /* ProjectHeaderView.swift */,
-				64D5F5AD293E77DC00547351 /* ProjectSummaryView.swift */,
-				640396D52939C3A5005EC779 /* SelectSomethingView.swift */,
+				64AD5EE829354B05000900BF /* Item-CoreDataHelpers.swift */,
+				64AD5EEB29354C94000900BF /* Project-CoreDataHelpers.swift */,
 			);
-			path = VIEWS;
-			sourceTree = "<group>";
-		};
-		64DE938029345549002373BE /* DATA MODELS */ = {
-			isa = PBXGroup;
-			children = (
-				640396DB293A6D93005EC779 /* Award.swift */,
-				64DE9373293454F3002373BE /* DataController.swift */,
-				64DE9375293454FC002373BE /* Main.xcdatamodeld */,
-			);
-			path = "DATA MODELS";
+			path = MODELS;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -182,6 +230,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 64DE936E2934547D002373BE /* Build configuration list for PBXNativeTarget "ProjectManager" */;
 			buildPhases = (
+				64AE3CA1294134D0006FF4A2 /* SwiftLint */,
 				64DE935C2934547C002373BE /* Sources */,
 				64DE935D2934547C002373BE /* Frameworks */,
 				64DE935E2934547C002373BE /* Resources */,
@@ -244,6 +293,28 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		64AE3CA1294134D0006FF4A2 /* SwiftLint */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = SwiftLint;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "export PATH=\"$PATH:/opt/homebrew/bin\"\nif which swiftlint > /dev/null; then\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		64DE935C2934547C002373BE /* Sources */ = {
@@ -428,14 +499,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = ProjectManager/ProjectManager.entitlements;
+				CODE_SIGN_ENTITLEMENTS = ProjectManager/CONFIGURATION/ProjectManager.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"ProjectManager/Preview Content\"";
 				DEVELOPMENT_TEAM = N8877H53MP;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = ProjectManager/Info.plist;
+				INFOPLIST_FILE = ProjectManager/CONFIGURATION/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -459,14 +530,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = ProjectManager/ProjectManager.entitlements;
+				CODE_SIGN_ENTITLEMENTS = ProjectManager/CONFIGURATION/ProjectManager.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"ProjectManager/Preview Content\"";
 				DEVELOPMENT_TEAM = N8877H53MP;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = ProjectManager/Info.plist;
+				INFOPLIST_FILE = ProjectManager/CONFIGURATION/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

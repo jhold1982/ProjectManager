@@ -22,6 +22,8 @@ struct HomeView: View {
 	// MARK: FETCH REQUEST INITIALIZER - COMPOUND PREDICATE
 	// This is to ensure "Completed Projects" don't show on the "Home" Tab
 	init() {
+		// Construct a fetch request showing the 10 highest-priority,
+		// incomplete items from an open project.
 		let request: NSFetchRequest<Item> = Item.fetchRequest()
 		let completedPredicate = NSPredicate(format: "completed = false")
 		let openPredicate = NSPredicate(format: "project.closed = false")
