@@ -17,7 +17,7 @@ class DataController: ObservableObject {
 	/// Defaults to perm storage.
 	/// - Parameter inMemory: Whether to store this data in temp memory or not.
 	init(inMemory: Bool = false) {
-		container = NSPersistentCloudKitContainer(name: "Main")
+		container = NSPersistentCloudKitContainer(name: "Main", managedObjectModel: Self.model)
 		// For testing purposes, this creates a temp in-memory
 		// database by writing to /dev/null so our data is
 		// destroyed after the app finishes running.
@@ -39,6 +39,15 @@ class DataController: ObservableObject {
 			fatalError("Fatal error creating preview: \(error.localizedDescription)")
 		}
 		return dataController
+	}()
+	static let model: NSManagedObjectModel = {
+		guard let url = Bundle.main.url(forResource: "Main", withExtension: "momd") else {
+			fatalError("Failed to locate model file.")
+		}
+		guard let managedObjectModel = NSManagedObjectModel(contentsOf: url) else {
+			fatalError("Failed to load model file.")
+		}
+		return managedObjectModel
 	}()
 	/// Creates example projects and items for manual testing.
 	/// - Throws: An NSError sent from calling save() on the NSManagedObjectContext
