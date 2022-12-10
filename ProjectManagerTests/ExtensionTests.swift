@@ -46,7 +46,7 @@ final class ExtensionTests: XCTestCase {
 		XCTAssertEqual(data["One"], 1, "The dictionary should contain Int to String mappings.")
 	}
 	func testBindingOnChange() {
-		//Given
+		// Given
 		var onChangeFunctionRun = false
 		func exampleFunctionToCall() {
 			onChangeFunctionRun = true
