@@ -37,7 +37,7 @@
 "Priority" = "Priority";
 "Creation Date" = "Creation Date";
 
-
+"Add data" = "Add data";
 
 "Basic settings" = "Basic settings";
 
@@ -79,7 +79,9 @@
 
 
 "Edit Item" = "Edit Item";
+"Edit item" = "Edit item";
 "Item name" = "Item name";
+"Item Name" = "Item Name";
 
 
 

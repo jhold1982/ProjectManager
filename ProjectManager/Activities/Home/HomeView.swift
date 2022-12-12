@@ -53,16 +53,19 @@ struct HomeView: View {
 					.padding(.horizontal)
 				}
 			}
+			// MARK: BUTTON FOR TESTING ADDING DATA
+			.toolbar {
+				Button("Add data") {
+				   dataController.deleteAll()
+				   try? dataController.createSampleData()
+				}
+			}
 			.background(Color.systemGroupedBackground.ignoresSafeArea())
 			.navigationTitle("Home")
 		}
     }
 }
-// MARK: BUTTON FOR TESTING ADDING DATA
-// Button("Add data") {
-//	dataController.deleteAll()
-//	try? dataController.createSampleData()
-// }
+
 struct HomeView_Previews: PreviewProvider {
 	static var dataController = DataController.preview
     static var previews: some View {

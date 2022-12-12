@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct ItemListView: View {
+//	@EnvironmentObject var dataController: DataController
 	let title: LocalizedStringKey
 	let items: FetchedResults<Item>.SubSequence
     var body: some View {
@@ -45,7 +46,10 @@ struct ItemListView: View {
     }
 }
 // struct ItemListView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        ItemListView()
-//    }
+//  static var dataController = DataController.preview
+//	static var previews: some View {
+//		ItemListView()
+//		.environment(\.managedObjectContext, dataController.container.viewContext)
+//		.environmentObject(dataController)
+//	 }
 // }

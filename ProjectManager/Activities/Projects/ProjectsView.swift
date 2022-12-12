@@ -57,9 +57,9 @@ struct ProjectsView: View {
 					// for the button, forcing a correct reading without
 					// losing the original layout.
 					if UIAccessibility.isVoiceOverRunning {
-						Text("Add project")
+						Text("Add Project")
 					} else {
-						Label("Add project", systemImage: "plus")
+						Label("add", systemImage: "plus")
 					}
 				}
 			}
