@@ -47,15 +47,15 @@ struct HomeView: View {
 						.fixedSize(horizontal: false, vertical: true)
 					}
 					VStack(alignment: .leading) {
-						ItemListView(title: "Up next", items: items.wrappedValue.prefix(3))
-						ItemListView(title: "More to explore", items: items.wrappedValue.dropFirst(3))
+						ItemListView(title: "Up Next", items: items.wrappedValue.prefix(3))
+						ItemListView(title: "More To Explore", items: items.wrappedValue.dropFirst(3))
 					}
 					.padding(.horizontal)
 				}
 			}
 			// MARK: BUTTON FOR TESTING ADDING DATA
 			.toolbar {
-				Button("Add data") {
+				Button("Add Data") {
 				   dataController.deleteAll()
 				   try? dataController.createSampleData()
 				}

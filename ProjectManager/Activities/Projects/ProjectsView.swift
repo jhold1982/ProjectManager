@@ -37,7 +37,7 @@ struct ProjectsView: View {
 						Button {
 							addItem(to: project)
 						} label: {
-							Label("Add new item", systemImage: "plus")
+							Label("Add New Item", systemImage: "plus")
 						}
 					}
 				}
@@ -50,16 +50,15 @@ struct ProjectsView: View {
 		ToolbarItem(placement: .navigationBarTrailing) {
 			if showClosedProjects == false {
 				Button(action: addProject) {
-					// in iOS 14.3, VoiceOver has a glitch that reads the label
-					// "Add project" as "Add" no matter what accessibility
-					// label we give the toolbar button when using a label.
-					// As a result, when VO is running, we use a text view
-					// for the button, forcing a correct reading without
-					// losing the original layout.
+					// In iOS 14.3 VoiceOver has a glitch that reads the label
+					// "Add Project" as "Add" no matter what accessibility label
+					// we give this button when using a label. As a result, when
+					// VoiceOver is running we use a text view for the button instead,
+					// forcing a correct reading without losing the original layout.
 					if UIAccessibility.isVoiceOverRunning {
 						Text("Add Project")
 					} else {
-						Label("add", systemImage: "plus")
+						Label("Add Project", systemImage: "plus")
 					}
 				}
 			}

@@ -18,28 +18,25 @@
 
 
 
-"Up next" = "Up next";
-"More to explore" = "More to explore";
+"Up Next" = "Up Next";
+"More To Explore" = "More To Explore";
 
 
 
 "Open Projects" = "Open Projects";
 "Closed Projects" = "Closed Projects";
 "Add Project" = "Add Project";
-"Add project" = "Add project";
 "Add New Item" = "Add New Item";
-"Add new item" = "Add new item";
 "Sort" = "Sort";
 "Sort Items" = "Sort Items";
-"Sort items" = "Sort items";
 "Optimized" = "Optimized";
 "Title" = "Title";
 "Priority" = "Priority";
 "Creation Date" = "Creation Date";
 
-"Add data" = "Add data";
+"Add Data" = "Add Data";
 
-"Basic settings" = "Basic settings";
+"Basic Settings" = "Basic Settings";
 
 
 
@@ -64,39 +61,33 @@
 
 
 "Edit Project" = "Edit Project";
-"Edit project" = "Edit project";
 
 
 
 "Project Name" = "Project Name";
 "Project Description" = "Project Description";
 
-
-
-"Basic Settings" = "Basic Settings";
 "Custom Project Color" = "Custom Project Color";
 
 
 
 "Edit Item" = "Edit Item";
-"Edit item" = "Edit item";
-"Item name" = "Item name";
+
 "Item Name" = "Item Name";
 
 
 
 "New Project" = "New Project";
 "New Item" = "New Item";
-"New project" = "New project";
-"New item" = "New item";
+
 
 
 
 "Mark Completed" = "Mark Completed";
-"Close project" = "Close project";
-"Delete project" = "Delete project";
-"Reopen project" = "Reopen project";
-"Delete project?" = "Delete project?";
+"Close Project" = "Close Project";
+"Delete Project" = "Delete Project";
+"Reopen Project" = "Reopen Project";
+"Delete Project?" = "Delete Project?";
 
 
 

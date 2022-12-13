@@ -37,11 +37,11 @@ struct EditProjectView: View {
 				.padding(.vertical)
 			}
 			Section(footer: Text("Closing a project moves it from open to closed status; Deleting it removes it entirely.")) {
-				Button(project.closed ? "Reopen project" : "Close project") {
+				Button(project.closed ? "Reopen Project" : "Close Project") {
 					project.closed.toggle()
 					update()
 				}
-				Button("Delete project") {
+				Button("Delete Project") {
 					showingDeleteConfirm.toggle()
 				}
 				.accentColor(.red)
@@ -51,7 +51,7 @@ struct EditProjectView: View {
 		.onDisappear(perform: dataController.save)
 		.alert(isPresented: $showingDeleteConfirm) {
 			Alert(
-				title: Text("Delete project?"),
+				title: Text("Delete Project?"),
 				message: Text("Are you sure you want to delete? This will delete all items in project."),
 				primaryButton: .default(Text("Delete"), action: delete),
 				secondaryButton: .cancel()
@@ -99,6 +99,5 @@ struct EditProjectView_Previews: PreviewProvider {
 		EditProjectView(project: Project.example)
 			.environment(\.managedObjectContext, dataController.container.viewContext)
 			.environmentObject(dataController)
-
     }
 }
