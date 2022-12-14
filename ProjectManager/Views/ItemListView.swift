@@ -8,9 +8,8 @@
 import SwiftUI
 
 struct ItemListView: View {
-//	@EnvironmentObject var dataController: DataController
 	let title: LocalizedStringKey
-	let items: FetchedResults<Item>.SubSequence
+	let items: ArraySlice<Item>
     var body: some View {
 		if items.isEmpty {
 			EmptyView()
