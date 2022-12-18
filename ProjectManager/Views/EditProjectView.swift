@@ -72,7 +72,8 @@ struct EditProjectView: View {
 	func toggleClosed() {
 		project.closed.toggle()
 			if project.closed {
-				UINotificationFeedbackGenerator().notificationOccurred(.success)
+//				UINotificationFeedbackGenerator().notificationOccurred(.success)
+				hapticExample()
 			}
 	}
 	// Haptic examples:

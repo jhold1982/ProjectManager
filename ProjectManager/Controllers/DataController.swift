@@ -6,6 +6,7 @@
 //
 
 import CoreData
+import CoreSpotlight
 import SwiftUI
 
 /// An environment singleton respoonsible for managing our Core Data stack, including handling saving,
@@ -84,9 +85,27 @@ class DataController: ObservableObject {
 			try? container.viewContext.save()
 		}
 	}
-	func delete(_ object: NSManagedObject) {
+	func delete(_ object: Project) {
+		let id = object.objectID.uriRepresentation().absoluteString
+		CSSearchableIndex.default().deleteSearchableItems(withDomainIdentifiers: [id])
 		container.viewContext.delete(object)
 	}
+	func delete(_ object: Item) {
+		let id = object.objectID.uriRepresentation().absoluteString
+		CSSearchableIndex.default().deleteSearchableItems(withIdentifiers: [id])
+		container.viewContext.delete(object)
+	}
+	// delete method as a single func
+//	func delete(_ object: NSManagedObject) {
+//		let id = object.objectID.uriRepresentation().absoluteString
+//		if object is Item {
+//			CSSearchableIndex.default().deleteSearchableItems(withIdentifiers: [id])
+//		} else {
+//			CSSearchableIndex.default().deleteSearchableItems(withDomainIdentifiers: [id])
+//		}
+//		container.viewContext.delete(object)
+//	}
+
 	func deleteAll() {
 		let fetchRequest1: NSFetchRequest<NSFetchRequestResult> = Item.fetchRequest()
 		let batchDeleteRequest1 = NSBatchDeleteRequest(fetchRequest: fetchRequest1)
@@ -116,5 +135,32 @@ class DataController: ObservableObject {
 //			fatalError("Unknown award criterion: \(award.criterion)")
 			return false
 		}
+	}
+	// enables ability to write to Spotlight
+	func update(_ item: Item) {
+		let itemID = item.objectID.uriRepresentation().absoluteString
+		let projectID = item.project?.objectID.uriRepresentation().absoluteString
+		let attributeSet = CSSearchableItemAttributeSet(contentType: .text)
+		attributeSet.title = item.itemTitle
+		attributeSet.contentDescription = item.itemDetail
+		let searchableItem = CSSearchableItem(
+			uniqueIdentifier: itemID,
+			domainIdentifier: projectID,
+			attributeSet: attributeSet
+		)
+		CSSearchableIndex.default().indexSearchableItems([searchableItem])
+		save()
+	}
+	func item(with uniqueIdentifier: String) -> Item? {
+		// if invalid url, fail
+		guard let url = URL(string: uniqueIdentifier) else {
+			return nil
+		}
+		// if valid url but invalid objectID, fail
+		guard let id = container.persistentStoreCoordinator.managedObjectID(forURIRepresentation: url) else {
+			return nil
+		}
+		// if unable to find object as an Item, fail
+		return try? container.viewContext.existingObject(with: id) as? Item
 	}
 }

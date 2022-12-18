@@ -5,6 +5,7 @@
 //  Created by Justin Hold on 11/27/22.
 //
 import CoreData
+import CoreSpotlight
 import SwiftUI
 
 struct HomeView: View {
@@ -20,6 +21,15 @@ struct HomeView: View {
     var body: some View {
 		NavigationView {
 			ScrollView {
+				if let item = viewModel.selectedItem {
+					NavigationLink(
+						destination: EditItemView(item: item),
+						tag: item,
+						selection: $viewModel.selectedItem,
+						label: EmptyView.init
+					)
+					.id(item)
+				}
 				VStack(alignment: .leading) {
 					ScrollView(.horizontal, showsIndicators: false) {
 						LazyHGrid(rows: projectRows) {
@@ -40,8 +50,14 @@ struct HomeView: View {
 			.toolbar {
 				Button("Add Data", action: viewModel.addSampleData)
 			}
+			.onContinueUserActivity(CSSearchableItemActionType, perform: loadSpotlightItem)
 		}
     }
+	func loadSpotlightItem(_ userActivity: NSUserActivity) {
+		if let uniqueIdentifier = userActivity.userInfo?[CSSearchableItemActivityIdentifier] as? String {
+			viewModel.selectItem(with: uniqueIdentifier)
+		}
+	}
 }
 
 struct HomeView_Previews: PreviewProvider {
@@ -49,6 +65,16 @@ struct HomeView_Previews: PreviewProvider {
 		HomeView(dataController: .preview)
     }
 }
+
+
+// MARK: NAVIGATIONLINK CODE REPLACEMENT FOR LINE 25
+// NavigationLink(
+//	 destination: EditItemView(item: item),
+//	 tag: item,
+//	 selection: $viewModel.selectedItem,
+//	 label: EmptyView.init
+// )
+// .id(item)
 
 // MARK: BUTTON FOR TESTING ADDING DATA
 // .toolbar {

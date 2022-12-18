@@ -41,7 +41,7 @@ struct EditItemView: View {
 		}
 		// MARK: FORM MODIFIERS
 		.navigationTitle("Edit Item")
-		.onDisappear(perform: update)
+		.onDisappear(perform: save)
     }
 	func update() {
 		item.project?.objectWillChange.send()
@@ -49,6 +49,9 @@ struct EditItemView: View {
 		item.detail = detail
 		item.priority = Int16(priority)
 		item.completed = completed
+	}
+	func save() {
+		dataController.update(item)
 	}
 }
 
