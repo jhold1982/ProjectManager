@@ -19,13 +19,11 @@ struct HomeView: View {
 		_viewModel = StateObject(wrappedValue: viewModel)
 	}
     var body: some View {
-		NavigationView {
+		NavigationStack {
 			ScrollView {
 				if let item = viewModel.selectedItem {
 					NavigationLink(
-						destination: EditItemView(item: item),
-						tag: item,
-						selection: $viewModel.selectedItem,
+						value: item,
 						label: EmptyView.init
 					)
 					.id(item)
@@ -65,7 +63,6 @@ struct HomeView_Previews: PreviewProvider {
 		HomeView(dataController: .preview)
     }
 }
-
 
 // MARK: NAVIGATIONLINK CODE REPLACEMENT FOR LINE 25
 // NavigationLink(

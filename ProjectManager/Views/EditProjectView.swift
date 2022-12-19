@@ -19,6 +19,9 @@ struct EditProjectView: View {
 	@State private var color: String
 	@State private var showingDeleteConfirm = false
 	@State private var engine = try? CHHapticEngine()
+	@State private var remindMe: Bool
+	@State private var reminderTime: Date
+	@State private var showingNotificationsError = false
 	let colorColumns = [
 		GridItem(.adaptive(minimum: 44))
 	]
@@ -27,6 +30,13 @@ struct EditProjectView: View {
 		_title = State(wrappedValue: project.projectTitle)
 		_detail = State(wrappedValue: project.projectDetail)
 		_color = State(wrappedValue: project.projectColor)
+		if let projectReminderTime = project.reminderTime {
+			_reminderTime = State(wrappedValue: projectReminderTime)
+			_remindMe = State(wrappedValue: true)
+		} else {
+			_reminderTime = State(wrappedValue: Date())
+			_remindMe = State(wrappedValue: false)
+		}
 	}
     var body: some View {
 		Form {
@@ -39,6 +49,25 @@ struct EditProjectView: View {
 					ForEach(Project.colors, id: \.self, content: colorButton)
 				}
 				.padding(.vertical)
+			}
+			Section("Project Reminders") {
+				Toggle("Show Reminders", isOn: $remindMe.animation().onChange(update))
+					.alert(isPresented: $showingNotificationsError) {
+						Alert(
+							title: Text("Oops!"),
+							message: Text("There was a problem."),
+							primaryButton: .default(Text("Check settings"),
+							action: showAppSettings),
+							secondaryButton: .cancel()
+						)
+					}
+				if remindMe {
+					DatePicker(
+						"Reminder Time",
+						selection: $reminderTime.onChange(update),
+						displayedComponents: .hourAndMinute
+					)
+				}
 			}
 			Section(footer: Text("Closing a project moves it from open to closed status; Deleting it removes it entirely.")) {
 				Button(project.closed ? "Reopen Project" : "Close Project", action: toggleClosed)
@@ -59,11 +88,23 @@ struct EditProjectView: View {
 			)
 		}
     }
-	// MARK: FUNCTIONS
 	func update() {
 		project.title = title
 		project.detail = detail
 		project.color = color
+		if remindMe {
+			project.reminderTime = reminderTime
+			dataController.addReminders(for: project) { success in
+				if success == false {
+					project.reminderTime = nil
+					remindMe = false
+					showingNotificationsError = true
+				}
+			}
+		} else {
+			project.reminderTime = nil
+			dataController.removeReminders(for: project)
+		}
 	}
 	func delete() {
 		dataController.delete(project)
@@ -72,12 +113,14 @@ struct EditProjectView: View {
 	func toggleClosed() {
 		project.closed.toggle()
 			if project.closed {
-//				UINotificationFeedbackGenerator().notificationOccurred(.success)
-				hapticExample()
+//				basicHaptic()
+				customHaptic()
 			}
 	}
-	// Haptic examples:
-	func hapticExample() {
+	func basicHaptic() {
+		UINotificationFeedbackGenerator().notificationOccurred(.success)
+	}
+	func customHaptic() {
 		// add do block inside "if project.closed" closure in "func toggleClosed"
 		do {
 			try engine?.start()
@@ -133,6 +176,14 @@ struct EditProjectView: View {
 				: .isButton
 		)
 		.accessibilityLabel(LocalizedStringKey(item))
+	}
+	func showAppSettings() {
+		guard let settingsURL = URL(string: UIApplication.openSettingsURLString) else {
+			return
+		}
+		if UIApplication.shared.canOpenURL(settingsURL) {
+			UIApplication.shared.open(settingsURL)
+		}
 	}
 }
 

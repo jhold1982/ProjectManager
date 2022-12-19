@@ -62,14 +62,18 @@
 
 "Edit Project" = "Edit Project";
 
-
+"Oops!" = "Oops!";
+"There was a problem." = "There was a problem.";
+"Check settings" = "Check settings";
 
 "Project Name" = "Project Name";
 "Project Description" = "Project Description";
 
 "Custom Project Color" = "Custom Project Color";
 
-
+"Project Reminders" = "Project Reminders";
+"Show Reminders" = "Show Reminders";
+"Reminder Time" = "Reminder Time";
 
 "Edit Item" = "Edit Item";
 

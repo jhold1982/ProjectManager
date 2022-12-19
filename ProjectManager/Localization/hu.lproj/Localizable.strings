@@ -47,6 +47,13 @@
 "Project name" = "Projekt név";
 "Description of this project" = "Projekt dokumentáció";
 "Custom project color" = "Egyedi projekt szín";
+"Project Reminders" = "Projekt Emlékeztetők";
+"Show Reminders" = "Emlékeztetők megjelenítése";
+"Reminder Time" = "Emlékeztető idő";
+
+"Oops!" = "Hoppá!";
+"There was a problem." = "Volt egy probléma.";
+"Check settings" = "Ellenőrizze a beállításokat";
 
 /* Options to close (mark as finished), open (mark as unfinished), or delete a project. */
 "Close this project" = "Projekt bezárása";
