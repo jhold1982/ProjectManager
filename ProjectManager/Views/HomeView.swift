@@ -23,7 +23,9 @@ struct HomeView: View {
 			ScrollView {
 				if let item = viewModel.selectedItem {
 					NavigationLink(
-						value: item,
+						destination: EditItemView(item: item),
+						tag: item,
+						selection: $viewModel.selectedItem,
 						label: EmptyView.init
 					)
 					.id(item)

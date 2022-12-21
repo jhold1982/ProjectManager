@@ -15,10 +15,23 @@ import SwiftUI
 class DataController: ObservableObject {
 	/// This is the lone CloudKit container used to store all of our data
 	let container: NSPersistentCloudKitContainer
+	/// The UserDefaults suite where we're saving user data
+	let defaults: UserDefaults
+	/// Loads and saves whether or not premium unlock has been purchased
+	var fullVersionUnlocked: Bool {
+		get {
+			defaults.bool(forKey: "fullVersionUnlocked")
+		}
+		set {
+			defaults.set(newValue, forKey: "fullVersionUnlocked")
+		}
+	}
 	/// This initializes a Data Controller either in memory for temp use or on perm storage.
 	/// Defaults to perm storage.
 	/// - Parameter inMemory: Whether to store this data in temp memory or not.
-	init(inMemory: Bool = false) {
+	/// - Parameter defaults: The UserDefaults suite where user data should be stored.
+	init(inMemory: Bool = false, defaults: UserDefaults = .standard) {
+		self.defaults = defaults
 		container = NSPersistentCloudKitContainer(name: "Main", managedObjectModel: Self.model)
 		// For testing purposes, this creates a temp in-memory
 		// database by writing to /dev/null so our data is

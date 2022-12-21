@@ -32,6 +32,7 @@
 		649AA10C2945102000548221 /* PerformanceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 649AA10B2945102000548221 /* PerformanceTests.swift */; };
 		64AD5EE929354B05000900BF /* Item-CoreDataHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64AD5EE829354B05000900BF /* Item-CoreDataHelpers.swift */; };
 		64AD5EEC29354C94000900BF /* Project-CoreDataHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64AD5EEB29354C94000900BF /* Project-CoreDataHelpers.swift */; };
+		64D3076C29539C1C00CBE98D /* UnlockManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64D3076B29539C1C00CBE98D /* UnlockManager.swift */; };
 		64D5F5AC293E75F800547351 /* ItemListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64D5F5AB293E75F800547351 /* ItemListView.swift */; };
 		64D5F5AE293E77DC00547351 /* ProjectSummaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64D5F5AD293E77DC00547351 /* ProjectSummaryView.swift */; };
 		64DE93642934547C002373BE /* ProjectManagerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64DE93632934547C002373BE /* ProjectManagerApp.swift */; };
@@ -95,6 +96,8 @@
 		649AA10B2945102000548221 /* PerformanceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PerformanceTests.swift; sourceTree = "<group>"; };
 		64AD5EE829354B05000900BF /* Item-CoreDataHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Item-CoreDataHelpers.swift"; sourceTree = "<group>"; };
 		64AD5EEB29354C94000900BF /* Project-CoreDataHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Project-CoreDataHelpers.swift"; sourceTree = "<group>"; };
+		64D3076B29539C1C00CBE98D /* UnlockManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnlockManager.swift; sourceTree = "<group>"; };
+		64D3076D29539E8900CBE98D /* Configuration.storekit */ = {isa = PBXFileReference; lastKnownFileType = text; path = Configuration.storekit; sourceTree = "<group>"; };
 		64D5F5AB293E75F800547351 /* ItemListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemListView.swift; sourceTree = "<group>"; };
 		64D5F5AD293E77DC00547351 /* ProjectSummaryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectSummaryView.swift; sourceTree = "<group>"; };
 		64DE93602934547C002373BE /* ProjectManager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ProjectManager.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -265,6 +268,8 @@
 		64DE93622934547C002373BE /* ProjectManager */ = {
 			isa = PBXGroup;
 			children = (
+				64D3076D29539E8900CBE98D /* Configuration.storekit */,
+				64D3076B29539C1C00CBE98D /* UnlockManager.swift */,
 				64DE93632934547C002373BE /* ProjectManagerApp.swift */,
 				6422070E2942614E000B58A9 /* Views */,
 				640396DD293A6E07005EC779 /* Assets */,
@@ -501,6 +506,7 @@
 				640396DF293A6E91005EC779 /* AwardsView.swift in Sources */,
 				64DE9374293454F3002373BE /* DataController.swift in Sources */,
 				646EEC97294A747A00B2AEBD /* HomeViewModel.swift in Sources */,
+				64D3076C29539C1C00CBE98D /* UnlockManager.swift in Sources */,
 				64AD5EEC29354C94000900BF /* Project-CoreDataHelpers.swift in Sources */,
 				64378BB3293732B40095B974 /* EditProjectView.swift in Sources */,
 				6470AE0F293BD914000C54D5 /* ColorAdditions.swift in Sources */,
