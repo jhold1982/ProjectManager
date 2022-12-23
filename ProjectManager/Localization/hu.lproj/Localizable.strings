@@ -63,7 +63,7 @@
 "Delete project?" = "Projekt törlése?";
 "Are you sure you want to delete this project? You will also delete all the items it contains." = "Biztosan törli a projektet? Az összes elem törlődni fog.";
 
-
+"Sorry, there was an error." = "Elnézést, hiba történt.";
 
 /* EDITING ITEMS */
 "Edit Item" = "Tétel szerkesztése";
@@ -76,14 +76,17 @@
 
 "Mark Completed" = "Befejezve"; /* Mark this item as being completed (finished/accomplished) */
 
-
+"Loading..." = "Betöltés...";
+"Thank you!" = "Köszönöm!";
+"Thank you! Your request is pending approval. You can continue using the app in the meantime." = "Köszönjük! Kérése jóváhagyásra vár. Addig is folytathatja az alkalmazás használatát.";
 
 /* AWARDS */
 
 "Locked" = "Zárt";
 "Unlocked: %@" = "Nyitott: %@";
 
-
+"Buy: %@" = "Megvesz: %@";
+"Dismiss" = "Elvetés";
 
 /* OTHER STRINGS */
 

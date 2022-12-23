@@ -79,12 +79,17 @@
 
 "Item Name" = "Item Name";
 
-
+"Sorry, there was an error." = "Sorry, there was an error.";
 
 "New Project" = "New Project";
 "New Item" = "New Item";
 
+"Loading..." = "Loading...";
+"Thank you!" = "Thank you!";
+"Thank you! Your request is pending approval. You can continue using the app in the meantime." = "Thank you! Your request is pending approval. You can continue using the app in the meantime.";
 
+"Buy: %@" = "Buy: %@";
+"Dismiss" = "Dismiss";
 
 
 "Mark Completed" = "Mark Completed";
