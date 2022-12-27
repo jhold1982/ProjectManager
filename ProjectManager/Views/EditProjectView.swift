@@ -10,8 +10,8 @@ import SwiftUI
 
 struct EditProjectView: View {
 	// Changed "let" to "@ObservableObject var" to check close/reopen bug
-//	let project: Project
-	@ObservedObject var project: Project
+	let project: Project
+//	@ObservedObject var project: Project
 	@EnvironmentObject var dataController: DataController
 	@Environment(\.presentationMode) var presentationMode
 	@State private var title: String

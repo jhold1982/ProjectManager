@@ -91,6 +91,11 @@
 "Buy: %@" = "Buy: %@";
 "Dismiss" = "Dismiss";
 
+"Get Unlimited Projects" = "Get Unlimited Projects";
+"You can add three projects for free, or pay %@ to add unlimited projects." = "You can add three projects for free, or pay %@ to add unlimited projects.";
+"If you have already purchased the unlock on another device, press Restore Purchases." = "If you have already purchased the unlock on another device, press Restore Purchases.";
+"Restore Purchases" = "Restore Purchases";
+
 
 "Mark Completed" = "Mark Completed";
 "Close Project" = "Close Project";

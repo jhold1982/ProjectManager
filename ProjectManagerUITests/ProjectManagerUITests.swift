@@ -21,10 +21,9 @@ class ProjectManagerUITests: XCTestCase {
 	func testOpenTabAddsProjects() {
 		app.buttons["Open"].tap()
 		XCTAssertEqual(app.tables.cells.count, 0, "There should be zero list rows initially.")
-		// replacing "tabCount" with "_" while line 28 is commented out
 		for _ in 1...5 {
 			app.buttons["Add Project"].tap()
-//			XCTAssertEqual(app.tables.children(matching: .other).count, tapCount, "There should be \(tapCount) list rows.")
+			XCTAssertEqual(app.tables.cells.count, 5, "There should be 5 list rows.")
 		}
 	}
 	func testAddingItemInsertsRows() {
