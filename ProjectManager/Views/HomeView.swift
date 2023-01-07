@@ -21,15 +21,15 @@ struct HomeView: View {
     var body: some View {
 		NavigationStack {
 			ScrollView {
-				if let item = viewModel.selectedItem {
-					NavigationLink(
-						destination: EditItemView(item: item),
-						tag: item,
-						selection: $viewModel.selectedItem,
-						label: EmptyView.init
-					)
-					.id(item)
-				}
+//				if let item = viewModel.selectedItem {
+//					NavigationLink(
+//						destination: EditItemView(item: item),
+//						tag: item,
+//						selection: $viewModel.selectedItem,
+//						label: EmptyView.init
+//					)
+//					.id(item)
+//				}
 				VStack(alignment: .leading) {
 					ScrollView(.horizontal, showsIndicators: false) {
 						LazyHGrid(rows: projectRows) {

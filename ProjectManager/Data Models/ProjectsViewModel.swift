@@ -45,6 +45,8 @@ extension ProjectsView {
 		func addItem(to project: Project) {
 			let item = Item(context: dataController.container.viewContext)
 			item.project = project
+			item.priority = 2
+			item.completed = false
 			item.creationDate = Date()
 			dataController.save()
 		}

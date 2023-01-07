@@ -12,6 +12,8 @@
 		640396DA293A66CF005EC779 /* Bundle-Decodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 640396D9293A66CF005EC779 /* Bundle-Decodable.swift */; };
 		640396DC293A6D93005EC779 /* Award.swift in Sources */ = {isa = PBXBuildFile; fileRef = 640396DB293A6D93005EC779 /* Award.swift */; };
 		640396DF293A6E91005EC779 /* AwardsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 640396DE293A6E91005EC779 /* AwardsView.swift */; };
+		640ECA65295B821900AE77F1 /* DataController-Reminders.swift in Sources */ = {isa = PBXBuildFile; fileRef = 640ECA64295B821900AE77F1 /* DataController-Reminders.swift */; };
+		640ECA67295B82D300AE77F1 /* DataController-Award.swift in Sources */ = {isa = PBXBuildFile; fileRef = 640ECA66295B82D300AE77F1 /* DataController-Award.swift */; };
 		6415C3802942723E00C64EE6 /* ProjectManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6415C37F2942723E00C64EE6 /* ProjectManagerTests.swift */; };
 		6415C3872942742D00C64EE6 /* AssetTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6415C3862942742D00C64EE6 /* AssetTest.swift */; };
 		6415C38B29427DC500C64EE6 /* ProjectTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6415C38A29427DC500C64EE6 /* ProjectTests.swift */; };
@@ -75,12 +77,29 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		640ECA3F295B7D3400AE77F1 /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		640396D32939B008005EC779 /* Sequence-Sorting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Sequence-Sorting.swift"; sourceTree = "<group>"; };
 		640396D52939C3A5005EC779 /* SelectSomethingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectSomethingView.swift; sourceTree = "<group>"; };
 		640396D9293A66CF005EC779 /* Bundle-Decodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle-Decodable.swift"; sourceTree = "<group>"; };
 		640396DB293A6D93005EC779 /* Award.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Award.swift; sourceTree = "<group>"; };
 		640396DE293A6E91005EC779 /* AwardsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AwardsView.swift; sourceTree = "<group>"; };
+		640ECA4A295B7F9200AE77F1 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
+		640ECA4C295B7F9200AE77F1 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
+		640ECA64295B821900AE77F1 /* DataController-Reminders.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DataController-Reminders.swift"; sourceTree = "<group>"; };
+		640ECA66295B82D300AE77F1 /* DataController-Award.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DataController-Award.swift"; sourceTree = "<group>"; };
 		6415C37D2942723E00C64EE6 /* ProjectManagerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ProjectManagerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6415C37F2942723E00C64EE6 /* ProjectManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectManagerTests.swift; sourceTree = "<group>"; };
 		6415C3862942742D00C64EE6 /* AssetTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssetTest.swift; sourceTree = "<group>"; };
@@ -169,6 +188,15 @@
 			path = Assets;
 			sourceTree = "<group>";
 		};
+		640ECA49295B7F9200AE77F1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				640ECA4A295B7F9200AE77F1 /* WidgetKit.framework */,
+				640ECA4C295B7F9200AE77F1 /* SwiftUI.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		6415C37E2942723E00C64EE6 /* ProjectManagerTests */ = {
 			isa = PBXGroup;
 			children = (
@@ -188,6 +216,8 @@
 			isa = PBXGroup;
 			children = (
 				64DE9373293454F3002373BE /* DataController.swift */,
+				640ECA66295B82D300AE77F1 /* DataController-Award.swift */,
+				640ECA64295B821900AE77F1 /* DataController-Reminders.swift */,
 				64D3076B29539C1C00CBE98D /* UnlockManager.swift */,
 			);
 			path = Controllers;
@@ -269,6 +299,7 @@
 				64DE93622934547C002373BE /* ProjectManager */,
 				6415C37E2942723E00C64EE6 /* ProjectManagerTests */,
 				6499CA3F2945537E00AAAE52 /* ProjectManagerUITests */,
+				640ECA49295B7F9200AE77F1 /* Frameworks */,
 				64DE93612934547C002373BE /* Products */,
 			);
 			sourceTree = "<group>";
@@ -379,6 +410,7 @@
 				64DE935C2934547C002373BE /* Sources */,
 				64DE935D2934547C002373BE /* Frameworks */,
 				64DE935E2934547C002373BE /* Resources */,
+				640ECA3F295B7D3400AE77F1 /* Embed Foundation Extensions */,
 			);
 			buildRules = (
 			);
@@ -398,7 +430,7 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
-				LastSwiftUpdateCheck = 1410;
+				LastSwiftUpdateCheck = 1420;
 				LastUpgradeCheck = 1410;
 				TargetAttributes = {
 					6415C37C2942723E00C64EE6 = {
@@ -526,6 +558,7 @@
 				64D3077129548CFF00CBE98D /* PurchaseButton.swift in Sources */,
 				64378BAF29372E1B0095B974 /* ProjectHeaderView.swift in Sources */,
 				64D3077329548E1000CBE98D /* ProductView.swift in Sources */,
+				640ECA67295B82D300AE77F1 /* DataController-Award.swift in Sources */,
 				640396DF293A6E91005EC779 /* AwardsView.swift in Sources */,
 				64DE9374293454F3002373BE /* DataController.swift in Sources */,
 				646EEC97294A747A00B2AEBD /* HomeViewModel.swift in Sources */,
@@ -549,6 +582,7 @@
 				646EEC99294A807500B2AEBD /* ItemRowViewModel.swift in Sources */,
 				64AD5EE929354B05000900BF /* Item-CoreDataHelpers.swift in Sources */,
 				64D3076F29548C1C00CBE98D /* SKProduct-LocalizedPrice.swift in Sources */,
+				640ECA65295B821900AE77F1 /* DataController-Reminders.swift in Sources */,
 				6488E168294926B700BBAE06 /* ProjectsViewModel.swift in Sources */,
 				64378BA929366C170095B974 /* EditItemView.swift in Sources */,
 			);
@@ -789,6 +823,7 @@
 		64DE936F2934547D002373BE /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = ProjectManager/CONFIGURATION/ProjectManager.entitlements;
@@ -799,6 +834,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = ProjectManager/CONFIGURATION/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.finance";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -820,6 +856,7 @@
 		64DE93702934547D002373BE /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = ProjectManager/CONFIGURATION/ProjectManager.entitlements;
@@ -830,6 +867,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = ProjectManager/CONFIGURATION/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.finance";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
