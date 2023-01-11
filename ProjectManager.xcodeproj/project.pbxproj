@@ -31,6 +31,10 @@
 		647029E129593BC20088F7EA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 647029E029593BC20088F7EA /* SceneDelegate.swift */; };
 		647029E229593CC60088F7EA /* Configuration.storekit in Resources */ = {isa = PBXBuildFile; fileRef = 64D3076D29539E8900CBE98D /* Configuration.storekit */; };
 		6470AE0F293BD914000C54D5 /* ColorAdditions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6470AE0E293BD914000C54D5 /* ColorAdditions.swift */; };
+		6485C81A296E5F210010C4BB /* SharedProject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6485C819296E5F210010C4BB /* SharedProject.swift */; };
+		6485C81C296E5F960010C4BB /* SharedItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6485C81B296E5F960010C4BB /* SharedItem.swift */; };
+		6485C81E296E60AC0010C4BB /* LoadStates.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6485C81D296E60AC0010C4BB /* LoadStates.swift */; };
+		6485C820296E61A90010C4BB /* SharedProjectsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6485C81F296E61A90010C4BB /* SharedProjectsView.swift */; };
 		6488E168294926B700BBAE06 /* ProjectsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6488E167294926B700BBAE06 /* ProjectsViewModel.swift */; };
 		6499CA412945537E00AAAE52 /* ProjectManagerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6499CA402945537E00AAAE52 /* ProjectManagerUITests.swift */; };
 		6499CA432945537E00AAAE52 /* ProjectManagerUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6499CA422945537E00AAAE52 /* ProjectManagerUITestsLaunchTests.swift */; };
@@ -117,6 +121,10 @@
 		647029DE29593BBA0088F7EA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		647029E029593BC20088F7EA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		6470AE0E293BD914000C54D5 /* ColorAdditions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorAdditions.swift; sourceTree = "<group>"; };
+		6485C819296E5F210010C4BB /* SharedProject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedProject.swift; sourceTree = "<group>"; };
+		6485C81B296E5F960010C4BB /* SharedItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedItem.swift; sourceTree = "<group>"; };
+		6485C81D296E60AC0010C4BB /* LoadStates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadStates.swift; sourceTree = "<group>"; };
+		6485C81F296E61A90010C4BB /* SharedProjectsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedProjectsView.swift; sourceTree = "<group>"; };
 		6488E167294926B700BBAE06 /* ProjectsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectsViewModel.swift; sourceTree = "<group>"; };
 		6499CA3E2945537E00AAAE52 /* ProjectManagerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ProjectManagerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6499CA402945537E00AAAE52 /* ProjectManagerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectManagerUITests.swift; sourceTree = "<group>"; };
@@ -257,6 +265,7 @@
 				64378BAE29372E1B0095B974 /* ProjectHeaderView.swift */,
 				64D5F5AD293E77DC00547351 /* ProjectSummaryView.swift */,
 				640396D52939C3A5005EC779 /* SelectSomethingView.swift */,
+				6485C81F296E61A90010C4BB /* SharedProjectsView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -345,6 +354,9 @@
 		64DE938029345549002373BE /* Data Models */ = {
 			isa = PBXGroup;
 			children = (
+				6485C81D296E60AC0010C4BB /* LoadStates.swift */,
+				6485C81B296E5F960010C4BB /* SharedItem.swift */,
+				6485C819296E5F210010C4BB /* SharedProject.swift */,
 				646EEC96294A747A00B2AEBD /* HomeViewModel.swift */,
 				6488E167294926B700BBAE06 /* ProjectsViewModel.swift */,
 				646EEC98294A807500B2AEBD /* ItemRowViewModel.swift */,
@@ -554,7 +566,10 @@
 			files = (
 				64DE937C29345515002373BE /* ProjectsView.swift in Sources */,
 				64D5F5AE293E77DC00547351 /* ProjectSummaryView.swift in Sources */,
+				6485C81A296E5F210010C4BB /* SharedProject.swift in Sources */,
+				6485C81E296E60AC0010C4BB /* LoadStates.swift in Sources */,
 				647029E129593BC20088F7EA /* SceneDelegate.swift in Sources */,
+				6485C81C296E5F960010C4BB /* SharedItem.swift in Sources */,
 				64D3077129548CFF00CBE98D /* PurchaseButton.swift in Sources */,
 				64378BAF29372E1B0095B974 /* ProjectHeaderView.swift in Sources */,
 				64D3077329548E1000CBE98D /* ProductView.swift in Sources */,
@@ -584,6 +599,7 @@
 				64D3076F29548C1C00CBE98D /* SKProduct-LocalizedPrice.swift in Sources */,
 				640ECA65295B821900AE77F1 /* DataController-Reminders.swift in Sources */,
 				6488E168294926B700BBAE06 /* ProjectsViewModel.swift in Sources */,
+				6485C820296E61A90010C4BB /* SharedProjectsView.swift in Sources */,
 				64378BA929366C170095B974 /* EditItemView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

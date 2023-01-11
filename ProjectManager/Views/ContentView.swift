@@ -17,26 +17,27 @@ struct ContentView: View {
 			HomeView(dataController: dataController)
 				.tag(HomeView.tag)
 				.tabItem {
-					Image(systemName: "house")
-					Text("Home")
+					Label("Home", systemImage: "house")
 				}
 			ProjectsView(dataController: dataController, showClosedProjects: false)
 				.tag(ProjectsView.openTag)
 				.tabItem {
-					Image(systemName: "list.bullet")
-					Text("Open")
+					Label("Open", systemImage: "list.bullet")
 				}
 			ProjectsView(dataController: dataController, showClosedProjects: true)
 				.tag(ProjectsView.closedTag)
 				.tabItem {
-					Image(systemName: "checkmark")
-					Text("Closed")
+					Label("Closed", systemImage: "checkmark")
 				}
 			AwardsView()
 				.tag(AwardsView.tag)
 				.tabItem {
-					Image(systemName: "rosette")
-					Text("Awards")
+					Label("Awards", systemImage: "rosette")
+				}
+			SharedProjectsView()
+				.tag(SharedProjectsView.tag)
+				.tabItem {
+					Label("Community", systemImage: "person.3")
 				}
 		}
 		.onContinueUserActivity(CSSearchableItemActionType, perform: moveToHome)

@@ -21,15 +21,13 @@ struct HomeView: View {
     var body: some View {
 		NavigationStack {
 			ScrollView {
-//				if let item = viewModel.selectedItem {
-//					NavigationLink(
-//						destination: EditItemView(item: item),
-//						tag: item,
-//						selection: $viewModel.selectedItem,
-//						label: EmptyView.init
-//					)
-//					.id(item)
-//				}
+				if let item = viewModel.selectedItem {
+					NavigationLink(
+						value: item,
+						label: EmptyView.init
+					)
+					.id(item)
+				}
 				VStack(alignment: .leading) {
 					ScrollView(.horizontal, showsIndicators: false) {
 						LazyHGrid(rows: projectRows) {
@@ -48,7 +46,8 @@ struct HomeView: View {
 			.background(Color.systemGroupedBackground.ignoresSafeArea())
 			.navigationTitle("Home")
 			.toolbar {
-				Button("Add Data", action: viewModel.addSampleData)
+				Button("Add +", action: viewModel.addSampleData)
+				Button("Delete -", action: viewModel.dataController.deleteAll)
 			}
 			.onContinueUserActivity(CSSearchableItemActionType, perform: loadSpotlightItem)
 		}

@@ -35,6 +35,9 @@
 "Creation Date" = "Creation Date";
 
 "Add Data" = "Add Data";
+"Add +" = "Add +";
+"Delete Data" = "Delete Data";
+"Delete -" = "Delete -";
 
 "Basic Settings" = "Basic Settings";
 
@@ -42,6 +45,9 @@
 
 "Closed Projects" = "Closed Projects";
 
+
+"Community" = "Community";
+"Shared Projects" = "Shared Projects";
 
 
 "Low" = "Low";
