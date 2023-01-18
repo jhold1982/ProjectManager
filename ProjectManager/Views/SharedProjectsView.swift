@@ -22,7 +22,7 @@ struct SharedProjectsView: View {
 					Text("No Results")
 				case .success:
 					List(projects) { project in
-						NavigationLink(destination: Color.blue) {
+						NavigationLink(destination: SharedItemsView(project: project)) {
 							VStack(alignment: .leading) {
 								Text(project.title)
 									.font(.headline)
@@ -38,6 +38,31 @@ struct SharedProjectsView: View {
 		.onAppear(perform: fetchSharedProjects)
     }
 	func fetchSharedProjects() {
+		guard loadState == .inactive else { return }
+		loadState = .loading
+		let pred = NSPredicate(value: true)
+		let sort = NSSortDescriptor(key: "creationDate", ascending: false)
+		let query = CKQuery(recordType: "Project", predicate: pred)
+		query.sortDescriptors = [sort]
+		let operation = CKQueryOperation(query: query)
+		operation.desiredKeys = ["title", "detail", "owner", "closed"]
+		operation.resultsLimit = 50
+		operation.recordFetchedBlock = { record in
+			let id = record.recordID.recordName
+			let title = record["title"] as? String ?? "No Title"
+			let detail = record["detail"] as? String ?? ""
+			let owner = record["owner"] as? String ?? "No Owner"
+			let closed = record["closed"] as? Bool ?? false
+			let sharedProject = SharedProject(id: id, title: title, detail: detail, owner: owner, closed: closed)
+			projects.append(sharedProject)
+			loadState = .success
+		}
+		operation.queryResultBlock = { _ in
+			if projects.isEmpty {
+				loadState = .noResults
+			}
+		}
+		CKContainer.default().publicCloudDatabase.add(operation)
 	}
 }
 
