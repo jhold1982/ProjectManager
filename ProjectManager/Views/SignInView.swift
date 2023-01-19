@@ -29,10 +29,10 @@ struct SignInView: View {
 	we ask that you sign in before
 	commenting on a project.
 
-	We don't track your personal information;
+	We don't track your personal info;
 	your name is used for display
 	purposes only.
-		  
+
 	Please note: we reserve the right to
 	remove messages that are
 	inappropriate or offensive.
@@ -42,10 +42,11 @@ struct SignInView: View {
 						SignInWithAppleButton(onRequest: configureSignIn, onCompletion: completeSignIn)
 							.frame(height: 44)
 							.clipShape(Capsule())
-							.padding()
+							.padding(.horizontal, 80)
 						Button("Cancel", action: {})
 							.frame(maxWidth: .infinity)
 							.padding()
+							.foregroundColor(.red)
 					}
 				case .authorized:
 					Text("You're all set!")
@@ -60,10 +61,8 @@ struct SignInView: View {
 		}
     }
 	func configureSignIn(_ request: ASAuthorizationAppleIDRequest) {
-		
 	}
 	func completeSignIn(_ result: Result<ASAuthorization, Error>) {
-		
 	}
 }
 
