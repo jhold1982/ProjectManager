@@ -15,6 +15,8 @@ struct SignInView: View {
 		case failure(Error?)
 	}
 	@State private var status = SignInStatus.unknown
+	@Environment(\.presentationMode) var presentationMode
+	@Environment(\.colorScheme) var colorScheme
     var body: some View {
 		NavigationStack {
 			Group {
@@ -40,10 +42,11 @@ struct SignInView: View {
 						}
 						Spacer()
 						SignInWithAppleButton(onRequest: configureSignIn, onCompletion: completeSignIn)
+							.signInWithAppleButtonStyle(colorScheme == .light ? .black : .white)
 							.frame(height: 44)
 							.clipShape(Capsule())
 							.padding(.horizontal, 80)
-						Button("Cancel", action: {})
+						Button("Cancel", action: closeWindow)
 							.frame(maxWidth: .infinity)
 							.padding()
 							.foregroundColor(.red)
@@ -61,8 +64,38 @@ struct SignInView: View {
 		}
     }
 	func configureSignIn(_ request: ASAuthorizationAppleIDRequest) {
+		request.requestedScopes = [.fullName]
 	}
 	func completeSignIn(_ result: Result<ASAuthorization, Error>) {
+		switch result {
+		case .success(let auth):
+			if let appleID = auth.credential as? ASAuthorizationAppleIDCredential {
+				if let fullName = appleID.fullName {
+					let formatter = PersonNameComponentsFormatter()
+					var username = formatter.string(from: fullName).trimmingCharacters(in: .whitespacesAndNewlines)
+					if username.isEmpty {
+						// refuse to allow empty string
+						username = "User-\(Int.random(in: 1001...9999))"
+					}
+					UserDefaults.standard.set(username, forKey: "username")
+					NSUbiquitousKeyValueStore.default.set(username, forKey: "username")
+					status = .authorized
+					closeWindow()
+					return
+				}
+			}
+		case .failure(let error):
+			if let error = error as? ASAuthorizationError {
+				if error.errorCode == ASAuthorizationError.canceled.rawValue {
+					status = .unknown
+					return
+				}
+			}
+			status = .failure(nil)
+		}
+	}
+	func closeWindow() {
+		presentationMode.wrappedValue.dismiss()
 	}
 }
 
