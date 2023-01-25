@@ -10,9 +10,10 @@ import CoreHaptics
 import SwiftUI
 
 struct EditProjectView: View {
-	// Changed "let" to "@ObservableObject var" to check close/reopen bug
-	let project: Project
-//	@ObservedObject var project: Project
+	enum CloudStatus {
+		case checking, exists, absent
+	}
+	@ObservedObject var project: Project
 	@EnvironmentObject var dataController: DataController
 	@Environment(\.presentationMode) var presentationMode
 	@State private var title: String
@@ -25,6 +26,8 @@ struct EditProjectView: View {
 	@State private var showingNotificationsError = false
 	@AppStorage("username") var username: String?
 	@State private var showingSignIn = false
+	@State private var cloudStatus = CloudStatus.checking
+	@State private var cloudError: CloudError?
 	let colorColumns = [
 		GridItem(.adaptive(minimum: 44))
 	]
@@ -41,7 +44,7 @@ struct EditProjectView: View {
 			_remindMe = State(wrappedValue: false)
 		}
 	}
-    var body: some View {
+	var body: some View {
 		Form {
 			Section("Basic Settings") {
 				TextField("Project Name", text: $title.onChange(update))
@@ -60,7 +63,7 @@ struct EditProjectView: View {
 							title: Text("Oops!"),
 							message: Text("There was a problem."),
 							primaryButton: .default(Text("Check settings"),
-							action: showAppSettings),
+													action: showAppSettings),
 							secondaryButton: .cancel()
 						)
 					}
@@ -82,10 +85,20 @@ struct EditProjectView: View {
 		}
 		.navigationTitle("Edit Project")
 		.toolbar {
-			Button(action: uploadToCloud) {
-				Label("Upload to iCloud", systemImage: "icloud.and.arrow.up")
+			switch cloudStatus {
+			case .checking:
+				ProgressView()
+			case .exists:
+				Button(action: removeFromCloud) {
+					Label("Remove from iCloud", systemImage: "icloud.slash")
+				}
+			case .absent:
+				Button(action: uploadToCloud) {
+					Label("Upload to iCloud", systemImage: "icloud.and.arrow.up")
+				}
 			}
 		}
+		.onAppear(perform: updateCloudStatus)
 		.onDisappear(perform: dataController.save)
 		.alert(isPresented: $showingDeleteConfirm) {
 			Alert(
@@ -95,8 +108,14 @@ struct EditProjectView: View {
 				secondaryButton: .cancel()
 			)
 		}
+		.alert(item: $cloudError) { error in
+			Alert(
+				title: Text("There was an error"),
+				message: Text(error.message)
+			)
+		}
 		.sheet(isPresented: $showingSignIn, content: SignInView.init)
-    }
+	}
 	func update() {
 		project.title = title
 		project.detail = detail
@@ -121,10 +140,10 @@ struct EditProjectView: View {
 	}
 	func toggleClosed() {
 		project.closed.toggle()
-			if project.closed {
-//				basicHaptic()
-				customHaptic()
-			}
+		if project.closed {
+			//				basicHaptic()
+			customHaptic()
+		}
 	}
 	func basicHaptic() {
 		UINotificationFeedbackGenerator().notificationOccurred(.success)
@@ -181,8 +200,8 @@ struct EditProjectView: View {
 		.accessibilityElement(children: .ignore)
 		.accessibilityAddTraits(
 			item == color
-				? [.isButton, .isSelected]
-				: .isButton
+			? [.isButton, .isSelected]
+			: .isButton
 		)
 		.accessibilityLabel(LocalizedStringKey(item))
 	}
@@ -204,13 +223,34 @@ struct EditProjectView: View {
 				case .success:
 					print("Success!")
 				case .failure:
-					print("\(result)")
+					print("There was an error.")
 				}
+				updateCloudStatus()
 			}
+			cloudStatus = .checking
 			CKContainer.default().publicCloudDatabase.add(operation)
 		} else {
 			showingSignIn = true
 		}
+	}
+	func updateCloudStatus() {
+		project.checkCloudStatus { exists in
+			if exists {
+				cloudStatus = .exists
+			} else {
+				cloudStatus = .absent
+			}
+		}
+	}
+	func removeFromCloud() {
+		let name = project.objectID.uriRepresentation().absoluteString
+		let id = CKRecord.ID(recordName: name)
+		let operation = CKModifyRecordsOperation(recordsToSave: nil, recordIDsToDelete: [id])
+		operation.modifyRecordsResultBlock = { _ in
+			updateCloudStatus()
+		}
+		cloudStatus = .checking
+		CKContainer.default().publicCloudDatabase.add(operation)
 	}
 }
 

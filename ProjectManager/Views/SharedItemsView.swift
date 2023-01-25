@@ -17,6 +17,7 @@ struct SharedItemsView: View {
 	@AppStorage("username") var username: String?
 	@State private var showingSignIn = false
 	@State private var newChatText = ""
+	@State private var cloudError: CloudError?
 	@ViewBuilder var messagesFooter: some View {
 		if username == nil {
 			Button("Sign in to comment", action: signIn)
@@ -75,6 +76,12 @@ struct SharedItemsView: View {
 			fetchSharedItems()
 			fetchChatMessages()
 		}
+		.alert(item: $cloudError) { error in
+			Alert(
+				title: Text("There was an error"),
+				message: Text(error.message)
+			)
+		}
 		.sheet(isPresented: $showingSignIn, content: SignInView.init)
     }
 	func fetchSharedItems() {
@@ -98,7 +105,7 @@ struct SharedItemsView: View {
 			items.append(sharedItem)
 			itemsLoadState = .success
 		}
-		operation.queryCompletionBlock = { _, _ in
+		operation.queryResultBlock = { _ in
 			if items.isEmpty {
 				itemsLoadState = .noResults
 			}
