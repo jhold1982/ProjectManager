@@ -80,6 +80,9 @@
 "Thank you!" = "Köszönöm!";
 "Thank you! Your request is pending approval. You can continue using the app in the meantime." = "Köszönjük! Kérése jóváhagyásra vár. Addig is folytathatja az alkalmazás használatát.";
 
+/* A username and message posted by the user */
+"%@: %@" = "%@: %@";
+
 /* AWARDS */
 
 "Locked" = "Zárt";

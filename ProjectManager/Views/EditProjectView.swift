@@ -89,7 +89,9 @@ struct EditProjectView: View {
 			case .checking:
 				ProgressView()
 			case .exists:
-				Button(action: removeFromCloud) {
+				Button {
+					removeFromCloud(deleteLocal: false)
+				} label: {
 					Label("Remove from iCloud", systemImage: "icloud.slash")
 				}
 			case .absent:
@@ -111,7 +113,7 @@ struct EditProjectView: View {
 		.alert(item: $cloudError) { error in
 			Alert(
 				title: Text("There was an error"),
-				message: Text(error.message)
+				message: Text(error.localizedMessage)
 			)
 		}
 		.sheet(isPresented: $showingSignIn, content: SignInView.init)
@@ -135,8 +137,12 @@ struct EditProjectView: View {
 		}
 	}
 	func delete() {
-		dataController.delete(project)
-		presentationMode.wrappedValue.dismiss()
+		if cloudStatus == .exists {
+			removeFromCloud(deleteLocal: true)
+		} else {
+			dataController.delete(project)
+			presentationMode.wrappedValue.dismiss()
+		}
 	}
 	func toggleClosed() {
 		project.closed.toggle()
@@ -242,7 +248,7 @@ struct EditProjectView: View {
 			}
 		}
 	}
-	func removeFromCloud() {
+	func removeFromCloud(deleteLocal: Bool) {
 		let name = project.objectID.uriRepresentation().absoluteString
 		let id = CKRecord.ID(recordName: name)
 		let operation = CKModifyRecordsOperation(recordsToSave: nil, recordIDsToDelete: [id])

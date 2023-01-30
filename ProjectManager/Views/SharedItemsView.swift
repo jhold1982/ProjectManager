@@ -14,10 +14,11 @@ struct SharedItemsView: View {
 	@State private var itemsLoadState = LoadState.inactive
 	@State private var messages = [ChatMessage]()
 	@State private var messagesLoadState = LoadState.inactive
-	@AppStorage("username") var username: String?
 	@State private var showingSignIn = false
 	@State private var newChatText = ""
 	@State private var cloudError: CloudError?
+	@AppStorage("username") var username: String?
+	@AppStorage("chatCount") var chatCount = 0
 	@ViewBuilder var messagesFooter: some View {
 		if username == nil {
 			Button("Sign in to comment", action: signIn)
@@ -64,7 +65,7 @@ struct SharedItemsView: View {
 			) {
 				if messagesLoadState == .success {
 					ForEach(messages) { message in
-						Text("\(Text(message.from).bold()): \(message.from)")
+						Text("\(Text(message.from).bold()): \(message.text)")
 							.multilineTextAlignment(.leading)
 					}
 				}
@@ -79,7 +80,7 @@ struct SharedItemsView: View {
 		.alert(item: $cloudError) { error in
 			Alert(
 				title: Text("There was an error"),
-				message: Text(error.message)
+				message: Text(error.localizedMessage)
 			)
 		}
 		.sheet(isPresented: $showingSignIn, content: SignInView.init)
@@ -133,6 +134,7 @@ struct SharedItemsView: View {
 			} else if let record = record {
 				let message = ChatMessage(from: record)
 				messages.append(message)
+				chatCount += 1
 			}
 		}
 	}
