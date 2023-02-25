@@ -47,23 +47,16 @@
 "Project name" = "Projekt név";
 "Description of this project" = "Projekt dokumentáció";
 "Custom project color" = "Egyedi projekt szín";
-"Project Reminders" = "Projekt Emlékeztetők";
-"Show Reminders" = "Emlékeztetők megjelenítése";
-"Reminder Time" = "Emlékeztető idő";
-
-"Oops!" = "Hoppá!";
-"There was a problem." = "Volt egy probléma.";
-"Check settings" = "Ellenőrizze a beállításokat";
 
 /* Options to close (mark as finished), open (mark as unfinished), or delete a project. */
 "Close this project" = "Projekt bezárása";
-"Closing a project moves it from the Open to Closed tab; deleting it removes the project entirely." = "A projekt bezárásával a Nyitottról a Zárt ablakba kerül; törlésével a projekt teljesen el lesz távolítva.";
+"Closing a project moves it from the Open to Closed tab; deleting it removes the project completely." = "A projekt bezárásával a Nyitottról a Zárt ablakba kerül; törlésével a projekt teljesen el lesz távolítva.";
 "Reopen this project" = "Projekt újra nyitása";
 "Delete this project" = "Projekt törlése";
 "Delete project?" = "Projekt törlése?";
 "Are you sure you want to delete this project? You will also delete all the items it contains." = "Biztosan törli a projektet? Az összes elem törlődni fog.";
 
-"Sorry, there was an error." = "Elnézést, hiba történt.";
+
 
 /* EDITING ITEMS */
 "Edit Item" = "Tétel szerkesztése";
@@ -76,20 +69,14 @@
 
 "Mark Completed" = "Befejezve"; /* Mark this item as being completed (finished/accomplished) */
 
-"Loading..." = "Betöltés...";
-"Thank you!" = "Köszönöm!";
-"Thank you! Your request is pending approval. You can continue using the app in the meantime." = "Köszönjük! Kérése jóváhagyásra vár. Addig is folytathatja az alkalmazás használatát.";
 
-/* A username and message posted by the user */
-"%@: %@" = "%@: %@";
 
 /* AWARDS */
 
 "Locked" = "Zárt";
 "Unlocked: %@" = "Nyitott: %@";
 
-"Buy: %@" = "Megvesz: %@";
-"Dismiss" = "Elvetés";
+
 
 /* OTHER STRINGS */
 

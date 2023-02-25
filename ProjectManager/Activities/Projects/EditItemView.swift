@@ -23,8 +23,8 @@ struct EditItemView: View {
 	@State private var completed: Bool
     var body: some View {
 		Form {
-			Section(header: Text("Basic Settings")) {
-				TextField("Item Name", text: $title.onChange(update))
+			Section(header: Text("Basic settings")) {
+				TextField("Item name", text: $title.onChange(update))
 				TextField("Description", text: $detail.onChange(update))
 			}
 			Section(header: Text("Priority")) {
@@ -41,7 +41,7 @@ struct EditItemView: View {
 		}
 		// MARK: FORM MODIFIERS
 		.navigationTitle("Edit Item")
-		.onDisappear(perform: save)
+		.onDisappear(perform: update)
     }
 	func update() {
 		item.project?.objectWillChange.send()
@@ -49,9 +49,6 @@ struct EditItemView: View {
 		item.detail = detail
 		item.priority = Int16(priority)
 		item.completed = completed
-	}
-	func save() {
-		dataController.update(item)
 	}
 }
 

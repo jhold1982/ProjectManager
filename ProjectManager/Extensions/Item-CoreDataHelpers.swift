@@ -6,7 +6,6 @@
 //
 
 import Foundation
-
 extension Item {
 	enum SortOrder {
 		case optimized, title, creationDate
@@ -21,7 +20,7 @@ extension Item {
 		creationDate ?? Date()
 	}
 	static var example: Item {
-		let controller = DataController.preview
+		let controller = DataController(inMemory: true)
 		let viewContext = controller.container.viewContext
 		let item = Item(context: viewContext)
 		item.title = "Example Item"

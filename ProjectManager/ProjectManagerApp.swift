@@ -9,24 +9,16 @@ import SwiftUI
 
 @main
 struct ProjectManagerApp: App {
-	@UIApplicationDelegateAdaptor(AppDelegate.self) var appDelegate
 	@StateObject var dataController: DataController
-	@StateObject var unlockManager: UnlockManager
 	init() {
 		let dataController = DataController()
-		let unlockManager = UnlockManager(dataController: dataController)
 		_dataController = StateObject(wrappedValue: dataController)
-		_unlockManager = StateObject(wrappedValue: unlockManager)
-		#if targetEnvironment(simulator)
-		UserDefaults.standard.set("leftHandedApps", forKey: "username")
-		#endif
 	}
     var body: some Scene {
         WindowGroup {
             ContentView()
 				.environment(\.managedObjectContext, dataController.container.viewContext)
 				.environmentObject(dataController)
-				.environmentObject(unlockManager)
 				.onReceive(
 					// Auto save when we detect that we are no longer
 					// the foreground app. Use this rather than the
@@ -35,7 +27,6 @@ struct ProjectManagerApp: App {
 					NotificationCenter.default.publisher(for: UIApplication.willResignActiveNotification),
 					perform: save
 				)
-				.onAppear(perform: dataController.appLaunched)
         }
     }
 	func save(_ note: Notification) {

@@ -9,7 +9,7 @@ import SwiftUI
 
 struct ItemListView: View {
 	let title: LocalizedStringKey
-	let items: ArraySlice<Item>
+	let items: FetchedResults<Item>.SubSequence
     var body: some View {
 		if items.isEmpty {
 			EmptyView()
@@ -45,10 +45,7 @@ struct ItemListView: View {
     }
 }
 // struct ItemListView_Previews: PreviewProvider {
-//  static var dataController = DataController.preview
-//	static var previews: some View {
-//		ItemListView()
-//		.environment(\.managedObjectContext, dataController.container.viewContext)
-//		.environmentObject(dataController)
-//	 }
+//    static var previews: some View {
+//        ItemListView()
+//    }
 // }

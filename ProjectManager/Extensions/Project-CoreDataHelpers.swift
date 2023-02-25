@@ -5,14 +5,10 @@
 //  Created by Justin Hold on 11/28/22.
 //
 
-import CloudKit
+import Foundation
 import SwiftUI
 
 extension Project {
-	static let colors = [
-		"Pink", "Purple", "Red", "Orange", "Gold", "Green", "Teal",
-		"Light Blue", "Dark Blue", "Midnight", "Dark Gray", "Gray"
-	]
 	var projectTitle: String {
 		title ?? NSLocalizedString("New Project", comment: "Create a new project")
 	}
@@ -22,6 +18,10 @@ extension Project {
 	var projectColor: String {
 		color ?? "Light Blue"
 	}
+	static let colors = [
+		"Pink", "Purple", "Red", "Orange", "Gold", "Green", "Teal",
+		"Light Blue", "Dark Blue", "Midnight", "Dark Gray", "Gray"
+	]
 	var projectItems: [Item] {
 		items?.allObjects as? [Item] ?? []
 	}
@@ -55,7 +55,7 @@ extension Project {
 		return Double(completedItems.count) / Double(originalItems.count)
 	}
 	static var example: Project {
-		let controller = DataController.preview
+		let controller = DataController(inMemory: true)
 		let viewContext = controller.container.viewContext
 		let project = Project(context: viewContext)
 		project.title = "Example Project"
@@ -73,40 +73,5 @@ extension Project {
 		case .optimized:
 			return projectItemsDefaultSorted
 		}
-	}
-	func prepareCloudRecords(owner: String) -> [CKRecord] {
-		let parentName = objectID.uriRepresentation().absoluteString
-		let parentID = CKRecord.ID(recordName: parentName)
-		let parent = CKRecord(recordType: "Project", recordID: parentID)
-		parent["title"] = projectTitle
-		parent["detail"] = projectDetail
-		parent["owner"] = owner
-		parent["closed"] = closed
-		var records = projectItemsDefaultSorted.map { item -> CKRecord in
-			let childName = item.objectID.uriRepresentation().absoluteString
-			let childID = CKRecord.ID(recordName: childName)
-			let child = CKRecord(recordType: "Item", recordID: childID)
-			child["title"] = item.itemTitle
-			child["detail"] = item.itemDetail
-			child["completed"] = item.completed
-			child["project"] = CKRecord.Reference(recordID: parentID, action: .deleteSelf)
-			return child
-		}
-		records.append(parent)
-		return records
-	}
-	func checkCloudStatus(_ completion: @escaping (Bool) -> Void) {
-		let name = objectID.uriRepresentation().absoluteString
-		let id = CKRecord.ID(recordName: name)
-		let operation = CKFetchRecordsOperation(recordIDs: [id])
-		operation.desiredKeys = ["recordID"]
-		operation.fetchRecordsCompletionBlock = { records, _ in
-			if let records = records {
-				completion(records.count == 1)
-			} else {
-				completion(false)
-			}
-		}
-		CKContainer.default().publicCloudDatabase.add(operation)
 	}
 }
