@@ -8,7 +8,7 @@
 import XCTest
 @testable import ProjectManager
 
-class AssetTest: BaseTestCase {
+class AssetTests: BaseTestCase {
 	func testColorsExist() {
 		for color in Project.colors {
 			XCTAssertNotNil(UIColor(named: color), "Failed to load color '\(color)' from asset catalog.")
