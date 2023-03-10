@@ -12,7 +12,7 @@ struct ContentView: View {
 	@EnvironmentObject var dataController: DataController
 	var body: some View {
 		TabView(selection: $selectedView) {
-			HomeView()
+			HomeView(dataController: dataController)
 				.tag(HomeView.tag)
 				.tabItem {
 					Image(systemName: "house")

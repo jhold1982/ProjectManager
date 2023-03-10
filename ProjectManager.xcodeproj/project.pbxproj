@@ -22,6 +22,8 @@
 		6470AE0F293BD914000C54D5 /* ColorAdditions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6470AE0E293BD914000C54D5 /* ColorAdditions.swift */; };
 		64800E3C29AD0FDC0081A93F /* ProjectManagerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64800E3B29AD0FDC0081A93F /* ProjectManagerUITests.swift */; };
 		64800E3E29AD0FDC0081A93F /* ProjectManagerUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64800E3D29AD0FDC0081A93F /* ProjectManagerUITestsLaunchTests.swift */; };
+		6492770929BB71FA005036FF /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6492770829BB71FA005036FF /* HomeViewModel.swift */; };
+		6492770B29BB7EA8005036FF /* ItemRowViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6492770A29BB7EA8005036FF /* ItemRowViewModel.swift */; };
 		64A1BC5F29AAAC520070BEA8 /* ProjectManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64A1BC5E29AAAC520070BEA8 /* ProjectManagerTests.swift */; };
 		64A1BC6629AAAFAA0070BEA8 /* AssetTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64A1BC6529AAAFAA0070BEA8 /* AssetTests.swift */; };
 		64A1BC6829AAB2920070BEA8 /* ProjectTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64A1BC6729AAB2920070BEA8 /* ProjectTests.swift */; };
@@ -82,6 +84,8 @@
 		64800E3929AD0FDC0081A93F /* ProjectManagerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ProjectManagerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		64800E3B29AD0FDC0081A93F /* ProjectManagerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectManagerUITests.swift; sourceTree = "<group>"; };
 		64800E3D29AD0FDC0081A93F /* ProjectManagerUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectManagerUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		6492770829BB71FA005036FF /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		6492770A29BB7EA8005036FF /* ItemRowViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemRowViewModel.swift; sourceTree = "<group>"; };
 		64A1BC5C29AAAC520070BEA8 /* ProjectManagerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ProjectManagerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		64A1BC5E29AAAC520070BEA8 /* ProjectManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectManagerTests.swift; sourceTree = "<group>"; };
 		64A1BC6529AAAFAA0070BEA8 /* AssetTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssetTests.swift; sourceTree = "<group>"; };
@@ -182,6 +186,7 @@
 			isa = PBXGroup;
 			children = (
 				64DE937829345515002373BE /* HomeView.swift */,
+				6492770829BB71FA005036FF /* HomeViewModel.swift */,
 				64D5F5AB293E75F800547351 /* ItemListView.swift */,
 				64D5F5AD293E77DC00547351 /* ProjectSummaryView.swift */,
 			);
@@ -196,8 +201,9 @@
 				640396D52939C3A5005EC779 /* SelectSomethingView.swift */,
 				64378BAE29372E1B0095B974 /* ProjectHeaderView.swift */,
 				64378BB2293732B40095B974 /* EditProjectView.swift */,
-				64378BAA29366E450095B974 /* ItemRowView.swift */,
 				64378BA829366C170095B974 /* EditItemView.swift */,
+				64378BAA29366E450095B974 /* ItemRowView.swift */,
+				6492770A29BB7EA8005036FF /* ItemRowViewModel.swift */,
 			);
 			path = Projects;
 			sourceTree = "<group>";
@@ -490,6 +496,7 @@
 				64378BAF29372E1B0095B974 /* ProjectHeaderView.swift in Sources */,
 				640396DF293A6E91005EC779 /* AwardsView.swift in Sources */,
 				64DE9374293454F3002373BE /* DataController.swift in Sources */,
+				6492770929BB71FA005036FF /* HomeViewModel.swift in Sources */,
 				64AD5EEC29354C94000900BF /* Project-CoreDataHelpers.swift in Sources */,
 				64378BB3293732B40095B974 /* EditProjectView.swift in Sources */,
 				6470AE0F293BD914000C54D5 /* ColorAdditions.swift in Sources */,
@@ -504,6 +511,7 @@
 				64D5F5AC293E75F800547351 /* ItemListView.swift in Sources */,
 				64DE937B29345515002373BE /* HomeView.swift in Sources */,
 				64DE93642934547C002373BE /* ProjectManagerApp.swift in Sources */,
+				6492770B29BB7EA8005036FF /* ItemRowViewModel.swift in Sources */,
 				64AD5EE929354B05000900BF /* Item-CoreDataHelpers.swift in Sources */,
 				6426290E29BA79CF00689C9D /* ProjectsViewModel.swift in Sources */,
 				64378BA929366C170095B974 /* EditItemView.swift in Sources */,
