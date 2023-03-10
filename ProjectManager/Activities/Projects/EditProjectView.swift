@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct EditProjectView: View {
-	let project: Project
+	@ObservedObject var project: Project
 	@EnvironmentObject var dataController: DataController
 	@Environment(\.presentationMode) var presentationMode
 	@State private var title: String
@@ -58,7 +58,6 @@ struct EditProjectView: View {
 			)
 		}
     }
-	// MARK: FUNCTIONS
 	func update() {
 		project.title = title
 		project.detail = detail
