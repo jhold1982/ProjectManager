@@ -5,8 +5,9 @@
 //  Created by Justin Hold on 11/26/22.
 //
 
-import CoreData
 import SwiftUI
+import CoreData
+import CoreSpotlight
 
 /// An environment singleton respoonsible for managing our Core Data stack, including handling saving,
 /// counting fetch requests, tracking awards, and dealing with sample data.
@@ -84,7 +85,25 @@ class DataController: ObservableObject {
 			try? container.viewContext.save()
 		}
 	}
-	func delete(_ object: NSManagedObject) {
+	// if I want to keep this wrapped up into one method
+//	func delete(_ object: NSManagedObject) {
+//		let id = object.objectID.uriRepresentation().absoluteString
+//		if object is Item {
+//			CSSearchableIndex.default().deleteSearchableItems(withIdentifiers: [id])
+//		} else {
+//			CSSearchableIndex.default().deleteSearchableItems(withDomainIdentifiers: [id])
+//		}
+//		container.viewContext.delete(object)
+//	}
+	// if I want them in separate methods
+	func delete(_ object: Project) {
+		let id = object.objectID.uriRepresentation().absoluteString
+		CSSearchableIndex.default().deleteSearchableItems(withDomainIdentifiers: [id])
+		container.viewContext.delete(object)
+	}
+	func delete(_ object: Item) {
+		let id = object.objectID.uriRepresentation().absoluteString
+		CSSearchableIndex.default().deleteSearchableItems(withIdentifiers: [id])
 		container.viewContext.delete(object)
 	}
 	func deleteAll() {
@@ -116,5 +135,34 @@ class DataController: ObservableObject {
 //			fatalError("Unknown award criterion: \(award.criterion)")
 			return false
 		}
+	}
+	// MARK: SPOTLIGHT
+	// method for Spotlight Search
+	func update(_ item: Item) {
+		// give unique identifier
+		let itemID = item.objectID.uriRepresentation().absoluteString
+		let projectID = item.project?.objectID.uriRepresentation().absoluteString
+		// decide which attributes to save in CoreSpotlight
+		let attributeSet = CSSearchableItemAttributeSet(contentType: .text)
+		attributeSet.title = item.itemTitle
+		attributeSet.contentDescription = item.itemDetail
+		// wrap up attributes, uniqueID, and domainID in a single item
+		let searchableItem = CSSearchableItem(
+			uniqueIdentifier: itemID,
+			domainIdentifier: projectID,
+			attributeSet: attributeSet
+		)
+		// last, index all of that and save/update
+		CSSearchableIndex.default().indexSearchableItems([searchableItem])
+		save()
+	}
+	func item(with uniqueIdentifier: String) -> Item? {
+		guard let url = URL(string: uniqueIdentifier) else {
+			return nil
+		}
+		guard let id = container.persistentStoreCoordinator.managedObjectID(forURIRepresentation: url) else {
+			return nil
+		}
+		return try? container.viewContext.existingObject(with: id) as? Item
 	}
 }

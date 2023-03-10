@@ -14,6 +14,7 @@ extension HomeView {
 		private let itemsController: NSFetchedResultsController<Item>
 		@Published var projects = [Project]()
 		@Published var items = [Item]()
+		@Published var selectedItem: Item?
 		var dataController: DataController
 		var upNext: ArraySlice<Item> {
 			items.prefix(3)
@@ -78,6 +79,9 @@ extension HomeView {
 		func addSampleData() {
 			dataController.deleteAll()
 			try? dataController.createSampleData()
+		}
+		func selectItem(with identifier: String) {
+			selectedItem = dataController.item(with: identifier)
 		}
 	}
 }
