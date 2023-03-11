@@ -66,7 +66,13 @@
 
 "Mark Completed" = "Befejezve"; /* Mark this item as being completed (finished/accomplished) */
 
-
+/* REMINDERS */
+"Project reminders" = "Projekt emlékeztető";
+"Show reminders" = "Emlékeztetők megjelenítése";
+"Oops!" = "Hoppá!";
+"There was a problem. Please enable notifications." = "Probléma. Ellenőrizze, hogy engedélyezve vannak az értesítések.";
+"Check Settings" = "Ellenőrizze a Beállításokat";
+"Reminder time" = "Emlékeztető ideje";
 
 /* AWARDS */
 "Locked" = "Zárt";

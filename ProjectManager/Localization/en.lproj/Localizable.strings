@@ -16,7 +16,13 @@
 "Closed" = "Closed";
 "Awards" = "Awards";
 
-
+/* REMINDERS */
+"Project reminders" = "Project reminders";
+"Show reminders" = "Show reminders";
+"Oops!" = "Oops!";
+"There was a problem. Please enable notifications." = "There was a problem. Please enable notifications.";
+"Check Settings" = "Check Settings";
+"Reminder time" = "Reminder time";
 
 "Up next" = "Up next";
 "More to explore" = "More to explore";
