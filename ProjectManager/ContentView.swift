@@ -38,6 +38,7 @@ struct ContentView: View {
 					Text("Awards")
 				}
 		}
+		.preferredColorScheme(.light)
 		.onContinueUserActivity(
 			CSSearchableItemActionType,
 			perform: moveToHome

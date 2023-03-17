@@ -12,6 +12,7 @@
 		640396DA293A66CF005EC779 /* Bundle-Decodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 640396D9293A66CF005EC779 /* Bundle-Decodable.swift */; };
 		640396DC293A6D93005EC779 /* Award.swift in Sources */ = {isa = PBXBuildFile; fileRef = 640396DB293A6D93005EC779 /* Award.swift */; };
 		640396DF293A6E91005EC779 /* AwardsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 640396DE293A6E91005EC779 /* AwardsView.swift */; };
+		6411C0A829C36DB700A585B4 /* UnlockManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6411C0A729C36DB700A585B4 /* UnlockManager.swift */; };
 		6426290E29BA79CF00689C9D /* ProjectsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6426290D29BA79CF00689C9D /* ProjectsViewModel.swift */; };
 		64378BA929366C170095B974 /* EditItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64378BA829366C170095B974 /* EditItemView.swift */; };
 		64378BAB29366E450095B974 /* ItemRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64378BAA29366E450095B974 /* ItemRowView.swift */; };
@@ -73,6 +74,8 @@
 		640396D9293A66CF005EC779 /* Bundle-Decodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle-Decodable.swift"; sourceTree = "<group>"; };
 		640396DB293A6D93005EC779 /* Award.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Award.swift; sourceTree = "<group>"; };
 		640396DE293A6E91005EC779 /* AwardsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AwardsView.swift; sourceTree = "<group>"; };
+		6411C0A729C36DB700A585B4 /* UnlockManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnlockManager.swift; sourceTree = "<group>"; };
+		6411C0A929C3701C00A585B4 /* Configuration.storekit */ = {isa = PBXFileReference; lastKnownFileType = text; path = Configuration.storekit; sourceTree = "<group>"; };
 		6426290D29BA79CF00689C9D /* ProjectsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectsViewModel.swift; sourceTree = "<group>"; };
 		64378BA829366C170095B974 /* EditItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditItemView.swift; sourceTree = "<group>"; };
 		64378BAA29366E450095B974 /* ItemRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemRowView.swift; sourceTree = "<group>"; };
@@ -290,6 +293,8 @@
 				64DE93632934547C002373BE /* ProjectManagerApp.swift */,
 				64DE9383293455B4002373BE /* ContentView.swift */,
 				64DE9373293454F3002373BE /* DataController.swift */,
+				6411C0A729C36DB700A585B4 /* UnlockManager.swift */,
+				6411C0A929C3701C00A585B4 /* Configuration.storekit */,
 				6422070E2942614E000B58A9 /* Activities */,
 				64AD5EEA29354B0D000900BF /* Extensions */,
 				6422070D294260D1000B58A9 /* Configuration */,
@@ -497,6 +502,7 @@
 				640396DF293A6E91005EC779 /* AwardsView.swift in Sources */,
 				64DE9374293454F3002373BE /* DataController.swift in Sources */,
 				6492770929BB71FA005036FF /* HomeViewModel.swift in Sources */,
+				6411C0A829C36DB700A585B4 /* UnlockManager.swift in Sources */,
 				64AD5EEC29354C94000900BF /* Project-CoreDataHelpers.swift in Sources */,
 				64378BB3293732B40095B974 /* EditProjectView.swift in Sources */,
 				6470AE0F293BD914000C54D5 /* ColorAdditions.swift in Sources */,
