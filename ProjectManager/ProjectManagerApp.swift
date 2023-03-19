@@ -31,6 +31,7 @@ struct ProjectManagerApp: App {
 					NotificationCenter.default.publisher(for: UIApplication.willResignActiveNotification),
 					perform: save
 				)
+				.onAppear(perform: dataController.appLaunched)
         }
     }
 	func save(_ note: Notification) {

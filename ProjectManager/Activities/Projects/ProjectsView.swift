@@ -96,6 +96,9 @@ struct ProjectsView: View {
 			}
 			SelectSomethingView()
 		}
+		.sheet(isPresented: $viewModel.showingUnlockView) {
+			UnlockView()
+		}
 	}
 	init(dataController: DataController, showClosedProjects: Bool) {
 		let viewModel = ViewModel(dataController: dataController, showClosedProjects: showClosedProjects)
