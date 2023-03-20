@@ -44,7 +44,7 @@
             parallelizable = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "64A1BC5B29AAAC520070BEA8"
+               BlueprintIdentifier = "6415C37C2942723E00C64EE6"
                BuildableName = "ProjectManagerTests.xctest"
                BlueprintName = "ProjectManagerTests"
                ReferencedContainer = "container:ProjectManager.xcodeproj">
@@ -55,7 +55,7 @@
             parallelizable = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "64800E3829AD0FDC0081A93F"
+               BlueprintIdentifier = "6499CA3D2945537E00AAAE52"
                BuildableName = "ProjectManagerUITests.xctest"
                BlueprintName = "ProjectManagerUITests"
                ReferencedContainer = "container:ProjectManager.xcodeproj">

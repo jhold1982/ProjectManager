@@ -2,14 +2,13 @@
 //  ProjectTests.swift
 //  ProjectManagerTests
 //
-//  Created by Justin Hold on 2/25/23.
+//  Created by Justin Hold on 12/8/22.
 //
-
 import CoreData
 import XCTest
 @testable import ProjectManager
 
-class ProjectTests: BaseTestCase {
+final class ProjectTests: BaseTestCase {
 	func testCreatingProjectsAndItems() {
 		let targetCount = 10
 		for _ in 0..<targetCount {

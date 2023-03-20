@@ -9,48 +9,61 @@
 "Delete" = "Delete";
 "Okay" = "Okay";
 
-"Add Data" = "Add Data";
+
 
 "Home" = "Home";
 "Open" = "Open";
 "Closed" = "Closed";
 "Awards" = "Awards";
 
-/* REMINDERS */
-"Project reminders" = "Project reminders";
-"Show reminders" = "Show reminders";
-"Oops!" = "Oops!";
-"There was a problem. Please enable notifications." = "There was a problem. Please enable notifications.";
-"Check Settings" = "Check Settings";
-"Reminder time" = "Reminder time";
 
-"Up next" = "Up next";
-"More to explore" = "More to explore";
 
+"Up Next" = "Up Next";
+"More To Explore" = "More To Explore";
+
+/* A username and message posted by the user */
+"%@: %@" = "%@: %@";
+
+/* COMMUNITY */
+
+"Shared Projects" = "Shared Projects";
+"Chat about this project…" = "Chat about this project…";
+"You're all set!" = "You're all set!";
+"Sorry, there was an error." = "Sorry, there was an error.";
+"Please sign in" = "Please sign in";
+"There was an error" = "There was an error";
+"Send" = "Send";
+"Enter your message" = "Enter your message";
+"Sign in to comment" = "Sign in to comment";
+"No results" = "No results";
+"In order to keep our community safe, we ask that you sign in before commenting on a project.\n\nWe don't track your personal information; your name is used for display purposes only.\n\nPlease note: we reserve the right to remove messages that are inappropriate or offensive." = "In order to keep our community safe, we ask that you sign in before commenting on a project.\n\nWe don't track your personal information; your name is used for display purposes only.\n\nPlease note: we reserve the right to remove messages that are inappropriate or offensive.";
 
 
 "Open Projects" = "Open Projects";
 "Closed Projects" = "Closed Projects";
 "Add Project" = "Add Project";
-"Add project" = "Add project";
 "Add New Item" = "Add New Item";
-"Add new item" = "Add new item";
 "Sort" = "Sort";
 "Sort Items" = "Sort Items";
-"Sort items" = "Sort items";
 "Optimized" = "Optimized";
 "Title" = "Title";
 "Priority" = "Priority";
 "Creation Date" = "Creation Date";
 
+"Add Data" = "Add Data";
+"Add +" = "Add +";
+"Delete Data" = "Delete Data";
+"Delete -" = "Delete -";
 
-
-"Basic settings" = "Basic settings";
+"Basic Settings" = "Basic Settings";
 
 
 
 "Closed Projects" = "Closed Projects";
 
+
+"Community" = "Community";
+"Shared Projects" = "Shared Projects";
 
 
 "Low" = "Low";
@@ -70,37 +83,47 @@
 
 
 "Edit Project" = "Edit Project";
-"Edit project" = "Edit project";
 
-
+"Oops!" = "Oops!";
+"There was a problem." = "There was a problem.";
+"Check settings" = "Check settings";
 
 "Project Name" = "Project Name";
 "Project Description" = "Project Description";
 
-
-
-"Basic Settings" = "Basic Settings";
 "Custom Project Color" = "Custom Project Color";
 
-
+"Project Reminders" = "Project Reminders";
+"Show Reminders" = "Show Reminders";
+"Reminder Time" = "Reminder Time";
 
 "Edit Item" = "Edit Item";
-"Item name" = "Item name";
 
+"Item Name" = "Item Name";
 
+"Sorry, there was an error." = "Sorry, there was an error.";
 
 "New Project" = "New Project";
 "New Item" = "New Item";
-"New project" = "New project";
-"New item" = "New item";
 
+"Loading..." = "Loading...";
+"Thank you!" = "Thank you!";
+"Thank you! Your request is pending approval. You can continue using the app in the meantime." = "Thank you! Your request is pending approval. You can continue using the app in the meantime.";
+
+"Buy: %@" = "Buy: %@";
+"Dismiss" = "Dismiss";
+
+"Get Unlimited Projects" = "Get Unlimited Projects";
+"You can add three projects for free, or pay %@ to add unlimited projects." = "You can add three projects for free, or pay %@ to add unlimited projects.";
+"If you have already purchased the unlock on another device, press Restore Purchases." = "If you have already purchased the unlock on another device, press Restore Purchases.";
+"Restore Purchases" = "Restore Purchases";
 
 
 "Mark Completed" = "Mark Completed";
-"Close project" = "Close project";
-"Delete project" = "Delete project";
-"Reopen project" = "Reopen project";
-"Delete project?" = "Delete project?";
+"Close Project" = "Close Project";
+"Delete Project" = "Delete Project";
+"Reopen Project" = "Reopen Project";
+"Delete Project?" = "Delete Project?";
 
 
 
@@ -138,16 +161,3 @@
 
 "%@, completed." = "%@, completed.";
 "%@, high priority." = "%@, high priority.";
-
-
-// Unlocking premium
-"Get Unlimited Projects" = "Get Unlimited Projects";
-"You can add three projects for free, or pay %@ to add unlimited projects." = "You can add three projects for free, or pay %@ to add unlimited projects.";
-"If you already bought the unlock on another device, press Restore Purchases." = "If you already bought the unlock on another device, press Restore Purchases.";
-"Restore Purchases" = "Restore Purchases";
-"Sorry, there was an error loading the store. Please try again later." = "Sorry, there was an error loading the store. Please try again later.";
-"Buy: %@" = "Buy: %@";
-"Loading…" = "Loading…";
-"Thank you!" = "Thank you!";
-"Thank you! Your request is pending approval, but you can carry on using the app in the meantime." = "Thank you! Your request is pending approval, but you can carry on using the app in the meantime.";
-"Dismiss" = "Dismiss";

@@ -9,6 +9,7 @@ import SwiftUI
 
 @main
 struct ProjectManagerApp: App {
+	@UIApplicationDelegateAdaptor(AppDelegate.self) var appDelegate
 	@StateObject var dataController: DataController
 	@StateObject var unlockManager: UnlockManager
 	init() {
@@ -16,6 +17,9 @@ struct ProjectManagerApp: App {
 		let unlockManager = UnlockManager(dataController: dataController)
 		_dataController = StateObject(wrappedValue: dataController)
 		_unlockManager = StateObject(wrappedValue: unlockManager)
+		#if targetEnvironment(simulator)
+		UserDefaults.standard.set("leftHandedApps", forKey: "username")
+		#endif
 	}
     var body: some Scene {
         WindowGroup {

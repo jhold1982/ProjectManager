@@ -2,10 +2,12 @@
 //  ProjectManagerUITestsLaunchTests.swift
 //  ProjectManagerUITests
 //
-//  Created by Justin Hold on 2/27/23.
+//  Created by Justin Hold on 12/10/22.
 //
 
+import CoreData
 import XCTest
+@testable import ProjectManager
 
 final class ProjectManagerUITestsLaunchTests: XCTestCase {
 
